@@ -1,0 +1,73 @@
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+layer-rule {
+    match namespace="^noctalia-wallpaper*"
+    place-within-backdrop true
+}
+
+//////////////////////// GEOMETRY
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Block out password managers from screen capture.
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    match app-id="Bitwarden"
+
+    block-out-from "screen-capture"
+
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+
+// Open localsend and authenticator as small floating windows.
+window-rule {
+    match app-id="localsend"
+    match app-id=r#".*Authenticator$"#
+
+    open-floating true
+    default-column-width { proportion 0.3; }
+    default-window-height { proportion 0.7; }
+}
+
+// Let these windows decide their own size to avoid weird rendering.
+window-rule {
+    match title=r#"Splash.*Kdenlive"#
+    match title=r#"NoScript.*Mullvad"#
+
+    open-floating true
+}
+
+// Windows to open maximised. Add as desired.
+window-rule {
+    match app-id="gimp"
+    match app-id="org.kde.kdenlive"
+    match app-id="vlc"
+
+    open-maximized true
+}
+
+/////////////// TRANSPARENCY
+window-rule {
+    // Windows not to be translucent. Add as desired.
+    exclude app-id="gimp"
+    exclude app-id=r#"(B|b)rowser"#
+    exclude app-id="vlc"
+
+    opacity 0.95
+}
+
+window-rule {
+    match is-focused=false
+
+    opacity 0.88
+}
