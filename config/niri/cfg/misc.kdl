@@ -9,6 +9,8 @@ environment {
     XDG_CURRENT_DESKTOP "niri"
     XDG_DATA_HOME "~/.local/share"
     QT_QPA_PLATFORMTHEME "gtk3"
+    SCALE_PATH "~/.local/share/scale-shell"
+    SCALE_TRIGGERS "~/.local/share/scale-shell/script/triggers"
 }
 
 debug {

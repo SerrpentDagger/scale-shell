@@ -9,22 +9,25 @@ binds {
     Mod+Shift+Slash                     { show-hotkey-overlay; }
 
     // ─── Noctalia ───
+    // See available: qs -c noctalia-shell ipc show
     Mod+S { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Mod+P { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
     Mod+Comma { spawn-sh "qs -c noctalia-shell ipc call notifications dismissOldest"; }
     Mod+Shift+Space { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
-    Mod+Ctrl+Space { spawn-sh "qs -c noctalia-shell ipc call wallpaper random"; }
+    // niri msg focused-output | grep -P "O
+    Mod+Ctrl+Space { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
 
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+B                               hotkey-overlay-title="Open Browser: mullvad" { spawn "~/.local/share/start-mullvad-browser.desktop"; }
+    Mod+B                               hotkey-overlay-title="Open Browser: mullvad" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
     Mod+Shift+L                         hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Escape                          hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     Mod+E                               hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "dolphin ~"; }
     Mod+Shift+B                         hotkey-overlay-title="System Monitor" { spawn-sh "btop"; }
     xF86Calculator { spawn-sh "echo No calculator installed!"; }
+    Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e source $SCALE_TRIGGERS/pkg_install.sh"; }
 
 
     // ─── Media Controls ───

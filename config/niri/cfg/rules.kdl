@@ -14,6 +14,7 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
     open-floating true
 }
 
@@ -33,6 +34,7 @@ window-rule {
 window-rule {
     match app-id="localsend"
     match app-id=r#".*Authenticator$"#
+    match app-id="keepassxc" title="Open database"
 
     open-floating true
     default-column-width { proportion 0.3; }
