@@ -10,14 +10,14 @@ binds {
 
     // ─── Noctalia ───
     // See available: qs -c noctalia-shell ipc show
-    Mod+S { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
-    Mod+P { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
-    Mod+Comma { spawn-sh "qs -c noctalia-shell ipc call notifications dismissOldest"; }
-    Mod+Shift+Space { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
+    Mod+S hotkey-overlay-title="Toggle Noctalia Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+    Mod+P hotkey-overlay-title="Cycle Power Profile" { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
+    Mod+Comma hotkey-overlay-title="Dissmiss Notification" { spawn-sh "qs -c noctalia-shell ipc call notifications dismissOldest"; }
+    Mod+Shift+Space hotkey-overlay-title="Toggle Noctalia Bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
     // niri msg focused-output | grep -P "O
-    Mod+Ctrl+Space { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
-    Mod+Shift+W { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
-    Mod+Shift+N { spawn-sh "niri msg action do-screen-transition && qs -c noctalia-shell ipc call nightLight toggle"; }
+    Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
+    Mod+Shift+W hotkey-overlay-title="Wallpaper Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
+    Mod+Shift+N hotkey-overlay-title="Toggle Nigth-Light" { spawn-sh "niri msg action do-screen-transition && qs -c noctalia-shell ipc call nightLight toggle"; }
 
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
@@ -27,7 +27,8 @@ binds {
     Mod+Escape                          hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     Mod+E                               hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "nautilus"; }
-    Mod+Shift+B                         hotkey-overlay-title="System Monitor" { spawn-sh "btop"; }
+    Mod+Shift+B                         hotkey-overlay-title="System Monitor" { spawn-sh "alacritty -e btop"; }
+    Mod+Shift+G                         hotkey-overlay-title="NVIDEA Monitor" { spawn-sh "alacritty -e nvtop"; }
     xF86Calculator { spawn-sh "gnome-calculator"; }
     Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e source /home/serpent/.local/share/scale-shell/script/triggers/pkg_install.sh"; }
 		Mod+N																hotkey-overlay-title="Open LazyVim" { spawn-sh "alacritty -e nvim"; }
