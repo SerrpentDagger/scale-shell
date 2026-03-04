@@ -7,10 +7,10 @@ environment {
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
     XDG_SESSION_TYPE "wayland"
     XDG_CURRENT_DESKTOP "niri"
-    XDG_DATA_HOME "~/.local/share"
-    QT_QPA_PLATFORMTHEME "gtk3"
-    SCALE_PATH "~/.local/share/scale-shell"
-    SCALE_TRIGGERS "~/.local/share/scale-shell/script/triggers"
+    XDG_DATA_HOME "/home/serpent/.local/share"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    SCALE_PATH "/home/serpent/.local/share/scale-shell"
+    SCALE_TRIGGERS "/home/serpent/.local/share/scale-shell/script/triggers"
 }
 
 debug {

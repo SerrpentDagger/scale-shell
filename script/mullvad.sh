@@ -9,9 +9,9 @@ rm -rf ~/.local/share/mullvad-browser
 rm -f ~/.local/share/applications/start-mullvad-browser.desktop
 
 # Extract into own share folder
-cd ~/.local/share
-tar -xvf $SCALET/mullvad-browser-linux-x86_64-*.tar.xz
-cd ~/.local/share/mullvad-browser
+cd ~/.local/share || exit 1
+tar -xvf "$SCALET/mullvad-browser-linux-x86_64-*.tar.xz"
+cd ~/.local/share/mullvad-browser || exit 1
 # Have it make a broken .desktop for itself in applications folder
 ./start-mullvad-browser.desktop --register-app
 # Fix said broken .desktop

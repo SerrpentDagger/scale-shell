@@ -53,7 +53,7 @@
         "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 8,
-        "marginVertical": 7,
+        "marginVertical": 9,
         "monitors": [
         ],
         "mouseWheelAction": "none",
@@ -428,17 +428,17 @@
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid",
+        "wifiDetailsViewMode": "list",
         "wifiEnabled": true
     },
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": true,
+        "enabled": false,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "2525"
+        "nightTemp": "2057"
     },
     "notifications": {
         "backgroundOpacity": 0.9500000000000001,
@@ -604,7 +604,7 @@
                 "id": "gtk"
             }
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,

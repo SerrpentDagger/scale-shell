@@ -6,9 +6,11 @@ source "$SCALEH/get-timestamp.sh"
 scale_backup="$HOME/Documents/scale-shell-back/$SCALESTAMP"
 mkdir -p "$scale_backup"
 
-cd "$SCALEC"
+cd "$SCALEC" || exit
 mv niri "$scale_backup/niri"
 mv noctalia "$scale_backup/noctalia"
+mv nvim "$scale_backup/nvim"
 
 cp -R ~/.config/niri niri
 cp -R ~/.config/noctalia noctalia
+cp -R ~/.config/nvim nvim

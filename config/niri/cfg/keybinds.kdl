@@ -17,6 +17,7 @@ binds {
     // niri msg focused-output | grep -P "O
     Mod+Ctrl+Space { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
     Mod+Shift+W { spawn-sh "qs -c noctalia-shell ipc call settings toggleTab wallpaper"; }
+    Mod+Shift+N { spawn-sh "niri msg action do-screen-transition && qs -c noctalia-shell ipc call nightLight toggle"; }
 
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
@@ -25,11 +26,11 @@ binds {
     Mod+Shift+L                         hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Escape                          hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
-    Mod+E                               hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "dolphin ~"; }
+    Mod+E                               hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "nautilus"; }
     Mod+Shift+B                         hotkey-overlay-title="System Monitor" { spawn-sh "btop"; }
     xF86Calculator { spawn-sh "echo No calculator installed!"; }
     Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e source $SCALE_TRIGGERS/pkg_install.sh"; }
-
+		Mod+N																hotkey-overlay-title="Open LazyVim" { spawn-sh "alacritty -e nvim"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }

@@ -58,6 +58,13 @@ window-rule {
     open-maximized true
 }
 
+// Windows to open half-height
+window-rule {
+    match app-id="org.gnome.Nautilus"
+
+    default-window-height { proportion 0.5; }
+}
+
 /////////////// TRANSPARENCY
 window-rule {
     // Windows not to be translucent. Add as desired.
@@ -71,5 +78,16 @@ window-rule {
 window-rule {
     match is-focused=false
 
-    opacity 0.88
+    opacity 0.87
+}
+
+// Windows to be extra-translucent.
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    draw-border-with-background false
+    opacity 0.83
+}
+window-rule {
+    match is-focused=false app-id="org.gnome.Nautilus"
+    opacity 0.75
 }

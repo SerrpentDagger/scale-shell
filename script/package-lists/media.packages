@@ -1,0 +1,28 @@
+# User-facing packages which deal with media files/production.
+
+# Media dev
+kdenlive
+obs-studio
+audacity
+gpu-screen-recorder
+gimp
+pinta
+krita
+blender
+
+# Minimalistic 3D viewer
+f3d
+
+# Media use
+vlc
+mpv
+
+# Text
+libreoffice-fresh
+apostrophe
+xournalpp
+pdfarranger
+texmaker
+
+# Communication
+signal-desktop
