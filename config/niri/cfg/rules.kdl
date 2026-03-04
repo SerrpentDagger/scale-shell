@@ -35,6 +35,7 @@ window-rule {
     match app-id="localsend"
     match app-id=r#".*Authenticator$"#
     match app-id="keepassxc" title="Open database"
+		match app-id="org.gnome.Calculator"
 
     open-floating true
     default-column-width { proportion 0.3; }
@@ -59,7 +60,7 @@ window-rule {
 }
 
 // Windows to open half-height
-window-rule {
+/-window-rule {
     match app-id="org.gnome.Nautilus"
 
     default-window-height { proportion 0.5; }

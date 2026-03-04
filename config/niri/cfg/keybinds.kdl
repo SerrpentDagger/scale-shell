@@ -28,8 +28,8 @@ binds {
 
     Mod+E                               hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "nautilus"; }
     Mod+Shift+B                         hotkey-overlay-title="System Monitor" { spawn-sh "btop"; }
-    xF86Calculator { spawn-sh "echo No calculator installed!"; }
-    Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e source $SCALE_TRIGGERS/pkg_install.sh"; }
+    xF86Calculator { spawn-sh "gnome-calculator"; }
+    Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e source /home/serpent/.local/share/scale-shell/script/triggers/pkg_install.sh"; }
 		Mod+N																hotkey-overlay-title="Open LazyVim" { spawn-sh "alacritty -e nvim"; }
 
     // ─── Media Controls ───

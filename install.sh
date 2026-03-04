@@ -9,7 +9,7 @@ source "$HOME/.local/share/scale-shell/vars.sh"
 source "$SCALEH/tmp-clear.sh"
 
 # Install
-source "$SCALES/packages.sh"
-source "$SCALES/autologin.sh"
-source "$SCALES/mullvad.sh"
-source "$SCALE/vintagestory.sh"
+# source "$SCALES/packages.sh"
+# source "$SCALES/autologin.sh"
+# source "$SCALES/mullvad.sh"
+source "$SCALES/vintagestory.sh"
