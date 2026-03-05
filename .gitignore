@@ -8,3 +8,6 @@ config/noctalia/colors.json
 
 # Ignore user-selected package list
 script/package-lists/user-selected.packages
+
+# Ignore wallpaper changes
+wallpaper
