@@ -5,6 +5,7 @@
 # Ignore autogenned color files
 config/niri/noctalia.kdl
 config/noctalia/colors.json
+config/nvim/lua/matugen.lua
 
 # Ignore user-selected package list
 script/package-lists/user-selected.packages
