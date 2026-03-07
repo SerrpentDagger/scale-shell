@@ -92,7 +92,7 @@
                     "diskPath": "/",
                     "iconColor": "none",
                     "id": "SystemMonitor",
-                    "showCpuCores": false,
+                    "showCpuCores": true,
                     "showCpuFreq": false,
                     "showCpuTemp": true,
                     "showCpuUsage": true,
@@ -389,14 +389,14 @@
     },
     "hooks": {
         "darkModeChange": "",
-        "enabled": false,
+        "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": ""
+        "wallpaperChange": "bash /home/serpent/.local/share/scale-shell/script/wallpaper.sh hook"
     },
     "idle": {
         "customCommands": "[]",
@@ -441,7 +441,7 @@
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
@@ -592,10 +592,6 @@
             },
             {
                 "enabled": true,
-                "id": "btop"
-            },
-            {
-                "enabled": true,
                 "id": "kcolorscheme"
             },
             {
@@ -609,6 +605,10 @@
             {
                 "enabled": true,
                 "id": "gtk"
+            },
+            {
+                "enabled": true,
+                "id": "btop"
             }
         ],
         "enableUserTheming": true
