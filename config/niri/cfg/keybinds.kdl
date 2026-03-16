@@ -34,13 +34,14 @@ binds {
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+B                               hotkey-overlay-title="Open Browser: mullvad" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
+		Mod+Shift+B													hotkey-overlay-title="Open Private Browser: tor" { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
     Mod+Shift+L                         hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Escape                          hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 		Mod+G 															hotkey-overlay-title="Open Gimp" { spawn "gimp"; }
 
     Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
 		Mod+Shift+E													hotkey-overlay-title="File Manager: Nautilus (starred)" { spawn-sh "nautilus starred:///"; }
-    Mod+Shift+B                         hotkey-overlay-title="System Monitor" { spawn-sh "alacritty -e btop"; }
+    Mod+Shift+C                         hotkey-overlay-title="System Monitor" { spawn-sh "alacritty -e btop"; }
     Mod+Shift+G                         hotkey-overlay-title="NVIDEA Monitor" { spawn-sh "alacritty -e nvtop"; }
     xF86Calculator { spawn-sh "gnome-calculator"; }
     // Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e bash /home/serpent/.local/share/scale-shell/script/triggers/pkg_install.sh"; }
@@ -166,8 +167,8 @@ binds {
 
 
     // ─── Modes ───
-    Mod+T                               { toggle-window-floating; }
-    Mod+Shift+T                         { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+T                               { toggle-window-floating; }
+    Mod+T                         { switch-focus-between-floating-and-tiling; }
     Mod+Shift+F                         { fullscreen-window; }
     Mod+Q                               { toggle-column-tabbed-display; }
 

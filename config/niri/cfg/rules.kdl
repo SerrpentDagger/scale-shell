@@ -46,6 +46,7 @@ window-rule {
 window-rule {
     match title=r#"Splash.*Kdenlive"#
     match title=r#"NoScript.*Mullvad"#
+		match app-id="krita" title=r#".+ — Krita"#
 
     open-floating true
 }
@@ -60,15 +61,15 @@ window-rule {
 
 // Windows to open maximised. Add as desired.
 window-rule {
-    match app-id="gimp"
-    match app-id="org.kde.kdenlive"
-    // match app-id="vlc"
+    match app-id=r#"(gimp|org.kde.kdenlive)"#
+		match app-id="krita" title=r#"^Krita$"#
 
     open-maximized true
 }
 
 window-rule {
 	match app-id=r#"libreoffice-.+"#
+	exclude app-id=r#"libreoffice-(writer|calc)"#
 
 	open-fullscreen false
 	open-maximized true
@@ -84,17 +85,24 @@ window-rule {
 /////////////// TRANSPARENCY
 window-rule {
     // Windows not to be translucent. Add as desired.
-    exclude app-id="gimp"
+    exclude app-id=r#"(gimp|vlc|imv)"#
     exclude app-id=r#"(?i)browser"#
-    exclude app-id="vlc"
 		exclude app-id=r#"libreoffice-(draw|impress)"# 
-		exclude app-id="imv"
+		exclude app-id="krita" title=r#"^Krita$"#
 
     opacity 0.95
 }
 
 window-rule {
+	// Specific browser pages for translucency
+	match app-id=r#"(?i)browser"# title=r#"(GitHub|GitLab|[Dd]ocumentation)"#
+
+	opacity 0.95
+}
+
+window-rule {
     match is-focused=false
+		exclude app-id="gimp" title=r#".*Color"#
 
     opacity 0.87
 }
