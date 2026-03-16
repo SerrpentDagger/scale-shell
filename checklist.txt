@@ -1,0 +1,3 @@
+alacritty color sed
+follow-up hooks for select-installed pkgs:
+	virt-manager: systemctl start libvirtd
