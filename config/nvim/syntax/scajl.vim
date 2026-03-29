@@ -22,7 +22,7 @@ syn keyword Character return exit call echo exec runscr runlab impscr read IMPOR
 syn keyword Boolean true
 syn keyword Boolean false
 syn keyword Repeat for while if equals nequals and or not compare sleep
-syn keyword Keyword import pack print_all_vars print print_debug
+syn keyword Special import pack print_all_vars print print_debug
 syn keyword Function var var_if var_array var_array_fill is_var test enforce enforce_one assert of_type get_type
 
 " operators
