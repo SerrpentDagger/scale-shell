@@ -35,6 +35,6 @@ return {
   config = function(_, opts)
     local mini_map = require("mini.map")
     mini_map.setup(opts)
-    mini_map.open()
+    -- mini_map.open()
   end,
 }
