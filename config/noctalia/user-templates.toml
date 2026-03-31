@@ -14,3 +14,8 @@
 input_path = "~/.config/nvim/lua/matugen-template.lua"
 output_path = "~/.config/nvim/lua/matugen.lua"
 post_hook = 'pkill -SIGUSR1 nvim'
+
+[templates.gcsd]
+input_path = "~/Desktop/GCSD/System-Template.gctheme"
+output_path = "~/Desktop/GCSD/data/themes/System.gctheme"
+post_hook = 'bash ~/.local/share/scale-shell/script/cmd/gcsd-process.sh'

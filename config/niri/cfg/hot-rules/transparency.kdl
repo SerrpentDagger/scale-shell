@@ -5,6 +5,7 @@ window-rule {
     exclude app-id=r#"(?i)browser"#
 		exclude app-id=r#"libreoffice-(draw|impress)"# 
 		exclude app-id="krita" title=r#"^Krita$"#
+		exclude app-id="Graphing Calculator SD"
 
     opacity 0.95
 }
