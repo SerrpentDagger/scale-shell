@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export SCALESTAMP=$(date +%s)
+export FEATHERSTAMP=$(date +%s)

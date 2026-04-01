@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source "$HOME/.local/share/scale-shell/vars.sh"
-source "$SCALEH/get-timestamp.sh"
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+source "$FEATHERH/get-timestamp.sh"
 
 if [[ $# -lt 1 ]]; then
 	echo "Usage: bash wallpaper.sh <random|preset NUM|hook>"
@@ -36,15 +36,15 @@ if [[ $1 == "hook" ]]; then
 	exit 0
 fi
 
-temp_name="SCALE_TEMP_BACKGROUND_"
+temp_name="FEATHER_TEMP_BACKGROUND_"
 # Remove old temp files
-rm "$SCALEW/$temp_name"* &>/dev/null || true
+rm "$FEATHERW/$temp_name"* &>/dev/null || true
 if [[ $1 == "random" ]]; then
-	wallpaper="$(get_random_file_or_return_path "$SCALEW")"
+	wallpaper="$(get_random_file_or_return_path "$FEATHERW")"
 elif [[ $1 == "preset" ]]; then
-	chosen_preset="$(get_random_file_or_return_path "$SCALEWP/$2")"
+	chosen_preset="$(get_random_file_or_return_path "$FEATHERWP/$2")"
 	# Ensure different name for new background, else noctalia ignores
-	target="$SCALEW/$temp_name$SCALESTAMP"
+	target="$FEATHERW/$temp_name$FEATHERSTAMP"
 	# Have to put them in the wallpaper directory first
 	if [[ -e "$chosen_preset" ]]; then
 		cp "$chosen_preset" "$target"

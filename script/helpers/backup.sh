@@ -10,11 +10,11 @@ if ! [[ -e "$1" ]]; then
 fi
 target="$1"
 
-source "$HOME/.local/share/scale-shell/vars.sh"
-source "$SCALEH/get-timestamp.sh"
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+source "$FEATHERH/get-timestamp.sh"
 
-scale_backup="$HOME/Documents/scale-shell-back/$SCALESTAMP"
-dest="$scale_backup$target"
+feather_backup="$HOME/Documents/feathers-and-flame-back/$FEATHERSTAMP"
+dest="$feather_backup$target"
 mkdir -p "$(dirname "$dest")"
 if [[ "$move_file" -eq 1 ]]; then
 	mv "$target" "$dest"

@@ -1,16 +1,16 @@
 #!/bin/bash
 
-source "$HOME/.local/share/scale-shell/vars.sh"
-source "$SCALEH/get-timestamp.sh"
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+source "$FEATHERH/get-timestamp.sh"
 
-scale_backup="$HOME/Documents/scale-shell-back/$SCALESTAMP"
-mkdir -p "$scale_backup"
+feather_backup="$HOME/Documents/feathers-and-flame-back/$FEATHERSTAMP"
+mkdir -p "$feather_backup"
 
-cd "$SCALEC" || exit
-mv niri "$scale_backup/niri"
-mv noctalia "$scale_backup/noctalia"
-mv nvim "$scale_backup/nvim"
-mv alacritty "$scale_backup/alacritty"
+cd "$FEATHERC" || exit
+mv niri "$feather_backup/niri"
+mv noctalia "$feather_backup/noctalia"
+mv nvim "$feather_backup/nvim"
+mv alacritty "$feather_backup/alacritty"
 
 cp -R ~/.config/niri niri
 cp -R ~/.config/noctalia noctalia

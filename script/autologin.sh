@@ -1,10 +1,10 @@
 #!/bin/bash
 
-source "$HOME/.local/share/scale-shell/vars.sh"
-source "$SCALEH/get-timestamp.sh"
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+source "$FEATHERH/get-timestamp.sh"
 
-scale_backup="$HOME/Documents/scale-shell-back/user/$SCALESTAMP"
-mkdir -p "$scale_backup"
+feather_backup="$HOME/Documents/feathers-and-flame-back/user/$FEATHERSTAMP"
+mkdir -p "$feather_backup"
 
 al_file="/etc/sddm.conf.d/autologin.conf"
 
@@ -12,7 +12,7 @@ al_file="/etc/sddm.conf.d/autologin.conf"
 sudo mkdir -p /etc/sddm.conf.d
 
 # Backup/move existing conf file
-[[ -e "$al_file" ]] && sudo mv "$al_file" "$scale_backup/" || true
+[[ -e "$al_file" ]] && sudo mv "$al_file" "$feather_backup/" || true
 
 # Copy ours in and set proper username
 sudo cp "$SCALC/sddm/autologin.conf" "$al_file"

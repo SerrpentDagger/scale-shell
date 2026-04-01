@@ -18,4 +18,4 @@ post_hook = 'pkill -SIGUSR1 nvim'
 [templates.gcsd]
 input_path = "~/Desktop/GCSD/System-Template.gctheme"
 output_path = "~/Desktop/GCSD/data/themes/System.gctheme"
-post_hook = 'bash ~/.local/share/scale-shell/script/cmd/gcsd-process.sh'
+post_hook = 'bash ~/.local/share/feathers-and-flame/script/cmd/gcsd-process.sh'

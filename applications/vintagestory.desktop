@@ -4,6 +4,6 @@ Name=VintageStory
 GenericName=Survival Game
 Comment=Uncompromising wilderness survival game
 Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia flatpak run at.vintagestory.VintageStory
-Icon=/home/serpent/.local/share/scale-shell/icons/vintagestory.png
+Icon=/home/serpent/.local/share/feathers-and-flame/icons/vintagestory.png
 Terminal=false
 Categories=Game;

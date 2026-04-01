@@ -6,11 +6,11 @@ echo "Adding $USER to gamemode group"
 # sudo usermod -aG gamemode "$USER"
 
 echo "Backing-up and copying config file into place"
-source "$HOME/.local/share/scale-shell/vars.sh"
-source "$SCALEH/get-timestamp.sh"
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+source "$FEATHERH/get-timestamp.sh"
 
-scale_backup="$HOME/Documents/scale-shell-back/user/$SCALESTAMP"
-mkdir -p "$scale_backup"
+feather_backup="$HOME/Documents/feathers-and-flame-back/user/$FEATHERSTAMP"
+mkdir -p "$feather_backup"
 
 gm_dir="/usr/share/gamemode"
 gm_file="$gm_dir/gamemode.ini"
@@ -19,10 +19,10 @@ gm_file="$gm_dir/gamemode.ini"
 sudo mkdir -p $gm_dir
 
 # Backup/move existing conf file
-[[ -e "$gm_file" ]] && sudo mv "$gm_file" "$scale_backup/" || true
+[[ -e "$gm_file" ]] && sudo mv "$gm_file" "$feather_backup/" || true
 
 # Copy ours in
-sudo cp "$SCALEC/gamemode/gamemode.ini" "$gm_file"
+sudo cp "$FEATHERC/gamemode/gamemode.ini" "$gm_file"
 
 echo "Enabling gamemoded service"
 systemctl --user enable --now gamemoded

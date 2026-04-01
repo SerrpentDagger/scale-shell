@@ -2,7 +2,7 @@
 
 set -euo pipefail
 # script to hide a destkop file robustly.
-source "$HOME/.local/share/scale-shell/vars.sh"
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 if ! [[ -f "$1" ]]; then
 	echo "Nonexistant file: $1"
@@ -11,7 +11,7 @@ if ! [[ -f "$1" ]]; then
 fi
 target="$1"
 echo "Backing up $target for desktop hide"
-source "$SCALEH/backup.sh" "$target"
+source "$FEATHERH/backup.sh" "$target"
 
 # Now modify
 sed_pattern="s/NoDisplay=false/NoDisplay=true/g"

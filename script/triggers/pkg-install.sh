@@ -19,5 +19,5 @@ pkg_names=$(pacman -Slq | fzf "${fzf_args[@]}")
 if [[ -n $pkg_names ]]; then
   # Convert newline-separated selections to space-separated for yay
   echo "$pkg_names" | tr '\n' ' ' | xargs sudo pacman -S --noconfirm
-  source "$SCALE_PATH/script/helpers/show-done.sh"
+  source "$FEATHER_PATH/script/helpers/show-done.sh"
 fi

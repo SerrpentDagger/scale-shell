@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ -z "$SCALET" ]]; then
-    echo "SCALET is not set!"
+if [[ -z "$FEATHERT" ]]; then
+    echo "FEATHERT is not set!"
     exit 1
 fi
-rm -rf "$SCALET"
+rm -rf "$FEATHERT"

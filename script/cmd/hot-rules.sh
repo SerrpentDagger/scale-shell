@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$HOME/.local/share/scale-shell/vars.sh"
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 # Hot-swapping rules for niri
 if [[ -z $1 ]]; then

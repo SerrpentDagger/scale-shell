@@ -6,7 +6,7 @@ fi
 is_aur_package() {
 	local package_name=$1
 	# Check if in aur list
-	if grep -q "^$package_name\$" "$SCALEP/aur.packages"; then
+	if grep -q "^$package_name\$" "$FEATHERP/aur.packages"; then
 		return 0
 	else
 		return 1
@@ -28,7 +28,7 @@ export -f get_package_info
 
 filter_user_selected_aur() {
 	for package in "$@"; do
-		is_aur_package "$package" && echo "$package" >>"$SCALEP/user-selected-aur.packages" || echo "$package" >>"$SCALEP/user-selected.packages"
+		is_aur_package "$package" && echo "$package" >>"$FEATHERP/user-selected-aur.packages" || echo "$package" >>"$FEATHERP/user-selected.packages"
 	done
 }
 
@@ -45,6 +45,6 @@ fzf_args=(
 	--color 'pointer:green,marker:green'
 )
 
-echo "$SCALEP/$1"
-pkg_names=$(grep -v '^#' "$SCALEP/$1" | grep -v '^$' | fzf "${fzf_args[@]}" || true)
+echo "$FEATHERP/$1"
+pkg_names=$(grep -v '^#' "$FEATHERP/$1" | grep -v '^$' | fzf "${fzf_args[@]}" || true)
 filter_user_selected_aur $pkg_names

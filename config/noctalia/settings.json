@@ -417,7 +417,7 @@
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": "bash /home/serpent/.local/share/scale-shell/script/cmd/wallpaper.sh hook"
+        "wallpaperChange": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
     },
     "idle": {
         "customCommands": "[]",
@@ -660,7 +660,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/serpent/.local/share/scale-shell/wallpaper",
+        "directory": "/home/serpent/.local/share/feathers-and-flame/wallpaper",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -671,12 +671,12 @@
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
             {
-                "directory": "/home/serpent/.local/share/scale-shell/wallpaper",
+                "directory": "/home/serpent/.local/share/feathers-and-flame/wallpaper",
                 "name": "eDP-1",
                 "wallpaper": ""
             },
             {
-                "directory": "/home/serpent/.local/share/scale-shell/wallpaper",
+                "directory": "/home/serpent/.local/share/feathers-and-flame/wallpaper",
                 "name": "HDMI-A-1",
                 "wallpaper": ""
             }
