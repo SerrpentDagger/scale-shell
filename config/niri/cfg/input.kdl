@@ -25,3 +25,9 @@ input {
     warp-mouse-to-focus
     workspace-auto-back-and-forth // Enable workspace back & forth switching
 }
+
+gestures {
+	hot-corners {
+		off
+	}
+}
