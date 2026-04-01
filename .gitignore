@@ -6,6 +6,7 @@
 config/niri/noctalia.kdl
 config/noctalia/colors.json
 config/nvim/lua/matugen.lua
+config/alacritty/themes/noctalia.toml
 
 # Ignore user-selected package list
 script/package-lists/user-selected.packages
