@@ -1,0 +1,6 @@
+input {
+	tablet {
+		map-to-output "HDMI-A-1"
+		calibration-matrix 1.0 0.0 0.0 0.0 1.2 0.0
+	}
+}

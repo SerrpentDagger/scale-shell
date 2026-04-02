@@ -33,6 +33,7 @@ binds {
     // ─── Hot-Rules ───
 		Mod+Alt+D hotkey-overlay-title="Toggle laptop-monitor on/off" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh hdmi-only"; }
 		Mod+Alt+T hotkey-overlay-title="Toggle global transparency" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh transparency"; }
+		Mod+Alt+P hotkey-overlay-title="Toggle tablet pen to HDMI-only" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/hot-rules.sh tablet-to-hdmi"; }
 
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }

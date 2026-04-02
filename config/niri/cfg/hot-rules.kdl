@@ -8,3 +8,6 @@
 
 // In case transparency is bothersom in a certain situation
 include "./hot-rules/transparency.kdl"
+
+// Map drawing tablet to HDMI monitor:
+include "./hot-rules/tablet-to-hdmi.kdl"

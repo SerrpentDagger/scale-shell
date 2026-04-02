@@ -198,7 +198,7 @@
                 {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
-                    "customIconPath": "",
+                    "customIconPath": "/home/serpent/.local/share/feathers-and-flame/icons/feathers.png",
                     "enableColorization": false,
                     "icon": "noctalia",
                     "id": "ControlCenter",
@@ -461,7 +461,7 @@
         "autoSchedule": true,
         "dayTemp": "6500",
         "enabled": true,
-        "forced": true,
+        "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "2552"
@@ -559,15 +559,15 @@
                 "action": "logout",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true,
-                "keybind": "4"
+                "enabled": false,
+                "keybind": ""
             },
             {
                 "action": "shutdown",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": "5"
+                "keybind": "4"
             },
             {
                 "action": "rebootToUefi",
