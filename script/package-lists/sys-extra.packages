@@ -5,11 +5,8 @@
 keepassxc
 authenticator
 
-# # Calculators
-# libqalculate
-#
-# # Doc viewers
-# evince
+# Flashing
+etcher-bin
 
 # Virtual machines
 virt-manager
