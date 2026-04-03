@@ -20,6 +20,7 @@ gum confirm "Install/Upgrade system packages?" && source "$FEATHERS/packages.sh"
 gum confirm "Setup auto-login?" && source "$FEATHERS/autologin.sh" || true
 gum confirm "Setup .desktop entries and hide supurfluous ones?" && source "$FEATHERS/desktops.sh" || true
 
+gum confirm "Install LazyVim?" && source "$FEATHERS/lazyvim.sh" || true
 gum confirm "Install Mullvad Browser?" && source "$FEATHERS/mullvad.sh" || true
 gum confirm "Install Tor Browser?" && source "$FEATHERS/mullvad.sh" tor || true
 gum confirm "Install Brave browser?" && source "$FEATHERS/brave.sh" || true
