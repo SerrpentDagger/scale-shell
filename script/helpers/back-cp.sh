@@ -12,6 +12,7 @@ source "$FEATHERH/backup.sh" -m "$2"
 
 source=$(realpath "$1")
 dest=$(realpath -m "$2")
+mkdir -p "$(dirname "$dest")"
 echo "  Copying $source to $dest"
 # Copy source to dest
 if [[ -d "$source" ]]; then
