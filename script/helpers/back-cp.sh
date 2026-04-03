@@ -11,7 +11,7 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 source "$FEATHERH/backup.sh" -m "$2"
 
 source=$(realpath "$1")
-dest=$(realpath "$2")
+dest=$(realpath -m "$2")
 echo "  Copying $source to $dest"
 # Copy source to dest
 if [[ -d "$source" ]]; then
