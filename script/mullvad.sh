@@ -1,11 +1,18 @@
 #!/bin/bash
 
-tor_version="15.0.7"
+tor_version="15.0.8"
 dl_link="https://mullvad.net/en/download/browser/linux-x86_64/latest"
 app_name="mullvad"
 if [[ "tor" == "$1" ]]; then
+	tor_link="https://www.torproject.org/download/"
+	html_text="$(curl -fsSL "$tor_link")"
+	tor_version=$(echo "$html_text" | grep "/dist/torbrowser" | grep -Po -m 1 "tor-browser-linux-x86_64-\\K\\d\\d\\.\\d+\\.\\d+")
 	dl_link="https://www.torproject.org/dist/torbrowser/$tor_version/tor-browser-linux-x86_64-$tor_version.tar.xz"
 	app_name="tor"
+	if [[ -z "$tor_version" ]]; then
+		echo "Unable to determine Tor version for download. Skipping."
+		return 1
+	fi
 fi
 
 # Download archive into tmp
