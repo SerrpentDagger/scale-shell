@@ -9,7 +9,6 @@ source "$FEATHERH/back-cp.sh" nvim ~/.config/nvim
 source "$FEATHERH/back-cp.sh" alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 source "$FEATHERH/back-cp.sh" qt/qt5ct.conf ~/.config/qt5ct/qt5ct.conf
 source "$FEATHERH/back-cp.sh" qt/qt6ct.conf ~/.config/qt6ct/qt6ct.conf
-source "$FEATHERH/back-cp.sh" tlp.conf /etc/tlp.conf
 
 source "$FEATHERH/sed-user.sh" ~/.config/noctalia/settings.json
 source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/misc.kdl
