@@ -3,7 +3,7 @@
 echo "Setting up additional configurations for Qemu VMs in virt-manager"
 # From Cachy Os doc page:
 # This will install the needed packages (note the "Windows 11" note below):
-sudo pacman -S qemu-full
+sudo pacman -S --noconfirm --needed qemu-full
 # Force libvirt to use iptables
 echo 'firewall_backend = "iptables"' | sudo tee -a /etc/libvirt/network.conf
 # This will add the user to the "libvirt" group so they can use it:

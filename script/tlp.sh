@@ -1,9 +1,10 @@
 #!/bin/bash
 
 echo "Install tlp power management"
-sudo pacman -S tlp tlp-pd tlp-rdw || exit 1
+sudo pacman -Run --noconfirm power-profiles-daemon
+sudo pacman -S --noconfirm --needed tlp tlp-pd tlp-rdw tlpui || return 1
 echo "Enable/mask relevant services"
-sudo systemctl enable tlp.service || exit 1
+sudo systemctl enable tlp.service || return 1
 sudo systemctl start tlp.service
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.socket

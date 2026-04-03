@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # npm cargo R
-sudo pacman -S npm lazygit ripgrep fd neovim
+sudo pacman -S --noconfirm --needed npm lazygit ripgrep fd neovim
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 

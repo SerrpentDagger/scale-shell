@@ -3,7 +3,7 @@
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 echo "Installing required dotnet-runtime for VS"
-sudo pacman -S dotnet-runtime-8.0
+sudo pacman -S --noconfirm --needed dotnet-runtime-8.0
 cd "$HOME" || exit 1
 vs_download=$(fzf --no-multi --header="Select the VS archive you downloaded from client area.")
 [[ -z $vs_download ]] && exit 1
