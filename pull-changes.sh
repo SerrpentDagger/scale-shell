@@ -9,4 +9,3 @@ source "$FEATHERH/back-cp.sh" ~/.config/nvim nvim
 source "$FEATHERH/back-cp.sh" ~/.config/alacritty alacritty
 source "$FEATHERH/back-cp.sh" ~/.config/qt5ct/qt5ct.conf qt/qt5ct.conf
 source "$FEATHERH/back-cp.sh" ~/.config/qt6ct/qt6ct.conf qt/qt6ct.conf
-source "$FEATHERH/back-cp.sh" /etc/tlp.conf tlp.conf
