@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -Syu wlsunset gum fzf yay gnome-calculator imv evince localsend
+sudo pacman -Syu wlsunset fzf yay gnome-calculator imv evince localsend
 
 if ! [[ -e "$FEATHERP/user-selected.packages" ]]; then
 	source "$FEATHERS/select-install.sh" sys-extra.packages 'extra system'

@@ -5,6 +5,8 @@ ansi_art='|========== Feathers and Flame ==========|'
 clear
 echo -e "\n$ansi_art\n"
 
+sudo pacman -Syu --noconfirm --needed git gum
+
 # Use custom branch if instructed, otherwise default to master
 FEATHERS_REF="${FEATHERS_REF:-master}"
 # Use custom repo if specified, otherwise default to basecamp/omarchy
