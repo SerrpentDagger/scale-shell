@@ -43,6 +43,14 @@ window-rule {
     default-window-height { proportion 0.7; }
 }
 
+window-rule {
+		match app-id="com.serpentdagger.feathers-update"
+
+    open-floating true
+    default-column-width { proportion 0.65; }
+    default-window-height { proportion 0.8; }
+}
+
 // Let these windows decide their own size to avoid weird rendering.
 window-rule {
     match title=r#"Splash.*Kdenlive"#
