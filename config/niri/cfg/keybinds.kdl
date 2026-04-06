@@ -15,6 +15,7 @@ binds {
     Mod+Comma hotkey-overlay-title="Dissmiss Notification" { spawn-sh "qs -c noctalia-shell ipc call notifications dismissOldest"; }
     Mod+Shift+Space hotkey-overlay-title="Toggle Noctalia Bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
     Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh random"; }
+		Mod+Shift+U hotkey-overlay-title="Update Feathers and Flame" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/update.sh"; }
     // Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
 		// Mod+Shift+1			{ spawn-sh "qs -c noctalia-shell ipc call wallpaper set /home/serpent/.local/share/feathers-and-flame/wallpaper-presets/1.* $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
     Mod+Shift+1 hotkey-overlay-title="Wallpaper Favourite 1 (through 0)" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 1"; }
