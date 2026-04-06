@@ -198,7 +198,7 @@
                 {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
-                    "customIconPath": "",
+                    "customIconPath": "/home/serpent/.local/share/feathers-and-flame/icons/feathers.png",
                     "enableColorization": false,
                     "icon": "noctalia",
                     "id": "ControlCenter",

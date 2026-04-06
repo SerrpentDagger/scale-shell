@@ -43,6 +43,7 @@ binds {
     Mod+Shift+O                         hotkey-overlay-title="Lock Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Escape                          repeat=false hotkey-overlay-title="Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 		Mod+G 															hotkey-overlay-title="Open Gimp" { spawn "gimp"; }
+		// Mod+Shift+G 															hotkey-overlay-title="Open Krita" { spawn "krita"; }
 		Mod+Y																hotkey-overlay-title="Open FreeTube (YT-viewer)" { spawn "freetube"; }
 
     Mod+E                               hotkey-overlay-title="File Manager" { spawn-sh "nautilus"; }

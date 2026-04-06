@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+
 tor_version="15.0.8"
 dl_link="https://mullvad.net/en/download/browser/linux-x86_64/latest"
 app_name="mullvad"
