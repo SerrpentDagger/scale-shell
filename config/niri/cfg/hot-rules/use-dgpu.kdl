@@ -1,0 +1,5 @@
+debug {
+	// emulate-zero-presentation-time
+	render-drm-device "/dev/dri/renderD129"
+	// wait-for-frame-completion-before-queueing
+}

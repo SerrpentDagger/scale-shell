@@ -7,8 +7,3 @@ output "eDP-1" {
 	scale 1
 }
 
-debug {
-	// render-drm-device "/dev/dri/renderD129"
-	emulate-zero-presentation-time
-	render-drm-device "/dev/dri/card2"
-}
