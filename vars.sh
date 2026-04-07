@@ -11,6 +11,7 @@ export FEATHERW="$FEATHER_PATH/wallpaper"
 export FEATHERWP="$FEATHER_PATH/wallpaper-presets"
 export FEATHERPS="$FEATHERS/pkg-setups"
 export FEATHERSTL="$FEATHER_PATH/templates"
+export FEATHERX="$FEATHER_PATH/textual"
 
 export NIRI_CONFIG="$HOME/.config/niri"
 export NIRI_CONFIG_CFG="$NIRI_CONFIG/cfg"
