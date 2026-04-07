@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
-sudo pacman -Syu --noconfirm wlsunset fzf yay gnome-calculator imv evince localsend
+sudo pacman -Syu --noconfirm wlsunset fzf yay gnome-calculator imv mpv evince localsend
 
 if ! [[ -e "$FEATHERP/user-selected.packages" ]]; then
 	source "$FEATHERS/select-install.sh" sys-extra.packages 'extra system'

@@ -1,7 +1,7 @@
 /////////////// TRANSPARENCY
 window-rule {
     // Windows not to be translucent. Add as desired.
-    exclude app-id=r#"(gimp|vlc|imv|FreeTube)"#
+    exclude app-id=r#"(gimp|vlc|imv|mpv|FreeTube)"#
     exclude app-id=r#"(?i)browser"#
 		exclude app-id=r#"libreoffice-(draw|impress)"# 
 		exclude app-id="krita" title=r#"^Krita$"#
