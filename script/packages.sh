@@ -22,6 +22,9 @@ pkg_installed localsend && source "$FEATHERPS/localsend.sh"
 # imv background
 pkg_installed imv && sudo sed -i "s/Exec=imv %F/Exec=imv -b checks %F/g" /usr/share/applications/imv.desktop || true
 
+# KeePassXC theme
+pkg_installed keepassxc && source "$FEATHERPS/keepass.sh"
+
 # Gimp theme (I actually prefer plain dark theme here.)
 # pkg_installed gimp && source "$FEATHERPS/gimp.sh"
 
