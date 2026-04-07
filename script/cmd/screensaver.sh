@@ -28,7 +28,7 @@ focused_output() {
 focused=$(focused_output)
 
 bonsai_blurb="$(shuf -n 1 -- "$FEATHERX/bonsai-blurbs.txt")"
-echo "$bonsai_blurb" | grep -v 'Feathers and Flame' && bonsai_blurb="$bonsai_blurb"...
+echo "$bonsai_blurb" | grep -v 'Feathers and Flame' | grep -v "\\." && bonsai_blurb="$bonsai_blurb"...
 
 outputword="outputs"
 if [[ "--current" = "$1" ]]; then
