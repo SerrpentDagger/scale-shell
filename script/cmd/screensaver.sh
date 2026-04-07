@@ -4,8 +4,19 @@
 if ! command -v cbonsai &>/dev/null; then
 	exit 1
 fi
+
+exit_screensaver() {
+	pkill -x cbonsai 2>/dev/null
+	pkill -f com.serpentdagger.screensaver 2>/dev/null
+	exit 0
+}
+
+if [[ "kill" = "$1" ]]; then
+	exit_screensaver
+fi
+
 # Only need one screensaver at a time.
-if pgrep -x cbonsai; then
+if pgrep -x cbonsai &>/dev/null; then
 	exit 0
 fi
 
@@ -28,12 +39,6 @@ screensaver_in_focus() {
 	if ! niri msg focused-window | grep -P "\w*App ID.*com\.serpentdagger\.screensaver" >/dev/null 2>&1; then
 		[[ "$focused" != "$(focused_output)" ]] && [[ "$outputword" = "focused-output" ]]
 	fi
-}
-
-exit_screensaver() {
-	pkill -x cbonsai 2>/dev/null
-	pkill -f com.serpentdagger.screensaver 2>/dev/null
-	exit 0
 }
 
 get_monitors() {
