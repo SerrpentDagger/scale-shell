@@ -413,7 +413,7 @@
         "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
-        "screenLock": "",
+        "screenLock": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh kill",
         "screenUnlock": "",
         "session": "",
         "startup": "",
@@ -630,10 +630,6 @@
             {
                 "enabled": true,
                 "id": "steam"
-            },
-            {
-                "enabled": true,
-                "id": "qt"
             },
             {
                 "enabled": true,

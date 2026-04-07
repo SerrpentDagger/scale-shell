@@ -19,3 +19,11 @@ post_hook = 'pkill -SIGUSR1 nvim'
 input_path = "~/.local/share/feathers-and-flame/templates/gcsd/System-Template.gctheme"
 output_path = "~/.local/share/feathers-and-flame/templates/gcsd/System.gctheme"
 post_hook = 'bash ~/.local/share/feathers-and-flame/script/cmd/gcsd-process.sh'
+
+[templates.qt5ct]
+input_path = "~/.local/share/feathers-and-flame/templates/qt/qtct.conf"
+output_path = "~/.config/qt5ct/colors/noctalia.conf"
+
+[templates.qt6ct]
+input_path = "~/.local/share/feathers-and-flame/templates/qt/qtct.conf"
+output_path = "~/.config/qt6ct/colors/noctalia.conf"

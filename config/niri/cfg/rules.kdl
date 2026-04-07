@@ -63,6 +63,7 @@ window-rule {
 		match app-id="krita" title=r#".+ — Krita"#
 		match app-id="vlc" title="Current Media Information"
 		match app-id="Tor Browser" title="Close Tor Browser"
+		match app-id="gimp" title="Preferences"
 
     open-floating true
 }
@@ -77,8 +78,9 @@ window-rule {
 
 // Windows to open maximised. Add as desired.
 window-rule {
-    match app-id=r#"(gimp|org.kde.kdenlive)"#
+    match app-id="org.kde.kdenlive"
 		match app-id="krita" title=r#"^Krita$"#
+		match app-id="gimp" title="GNU Image Manipulation Program"
 
     open-maximized true
 }
