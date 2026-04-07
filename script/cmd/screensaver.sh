@@ -11,11 +11,23 @@ fi
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 niri_output_pattern='^Output.*\(\K[^\)]+'
+focused_output() {
+	niri msg focused-output | grep -oP "$niri_output_pattern"
+}
+focused=$(focused_output)
+
 bonsai_blurb="$(shuf -n 1 -- "$FEATHERX/bonsai-blurbs.txt")"
 echo "$bonsai_blurb" | grep -v 'Feathers and Flame' && bonsai_blurb="$bonsai_blurb"...
 
+outputword="outputs"
+if [[ "--current" = "$1" ]]; then
+	outputword="focused-output"
+fi
+
 screensaver_in_focus() {
-	niri msg focused-window | grep -P "\w*App ID.*com\.serpentdagger\.screensaver" >/dev/null 2>&1
+	if ! niri msg focused-window | grep -P "\w*App ID.*com\.serpentdagger\.screensaver" >/dev/null 2>&1; then
+		[[ "$focused" != "$(focused_output)" ]] && [[ "$outputword" = "focused-output" ]]
+	fi
 }
 
 exit_screensaver() {
@@ -25,7 +37,7 @@ exit_screensaver() {
 }
 
 get_monitors() {
-	niri msg outputs | grep -oP "$niri_output_pattern"
+	niri msg $outputword | grep -oP "$niri_output_pattern"
 }
 
 focus_monitor() {
@@ -34,8 +46,6 @@ focus_monitor() {
 
 # Exit the screensaver on signals and input from keyboard and mouse
 trap exit_screensaver SIGINT SIGTERM SIGHUP SIGQUIT
-
-focused=$(niri msg focused-output | grep -oP "$niri_output_pattern")
 
 for m in $(get_monitors); do
 	focus_monitor "$m"
