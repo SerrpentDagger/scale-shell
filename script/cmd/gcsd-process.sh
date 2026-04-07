@@ -5,9 +5,12 @@
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 themes=$HOME/Desktop/GCSD/data/themes
-target="$FEATHERSTL/gcsd/System.gctheme"
+target="$FEATHERT/gcsd/System.gctheme"
 output="$themes/System.gctheme"
-! [[ -d "$(dirname "$output")" ]] && return 1
+cleanup() {
+	source "$FEATHERH/tmp-clear.sh"
+}
+! [[ -d "$(dirname "$output")" ]] && cleanup && return 1
 
 awk '
 BEGIN{ OFS=""; }
@@ -24,3 +27,6 @@ BEGIN{ OFS=""; }
   print line
 }
 ' "$target" >"$output"
+
+# Discard generated malformed theme file
+cleanup

@@ -17,7 +17,7 @@ post_hook = 'pkill -SIGUSR1 nvim'
 
 [templates.gcsd]
 input_path = "~/.local/share/feathers-and-flame/templates/gcsd/System-Template.gctheme"
-output_path = "~/.local/share/feathers-and-flame/templates/gcsd/System.gctheme"
+output_path = "~/.local/share/feathers-and-flame/script/helpers/tempfiles/gcsd/System.gctheme"
 post_hook = 'bash ~/.local/share/feathers-and-flame/script/cmd/gcsd-process.sh'
 
 [templates.qt5ct]
