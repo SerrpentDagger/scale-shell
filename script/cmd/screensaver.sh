@@ -28,6 +28,7 @@ focused_output() {
 focused=$(focused_output)
 
 bonsai_blurb="$(shuf -n 1 -- "$FEATHERX/bonsai-blurbs.txt")"
+bonsai_blurb="${bonsai_blurb//traveler/$USER}"
 echo "$bonsai_blurb" | grep -v 'Feathers and Flame' | grep -v "\\." && bonsai_blurb="$bonsai_blurb"...
 
 outputword="outputs"
