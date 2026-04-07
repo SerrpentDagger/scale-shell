@@ -420,7 +420,7 @@
         "wallpaperChange": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
     },
     "idle": {
-        "customCommands": "[]",
+        "customCommands": "[{\"name\":\"Screensaver\",\"timeout\":120,\"command\":\"bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh\",\"resumeCommand\":\"\"}]",
         "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
