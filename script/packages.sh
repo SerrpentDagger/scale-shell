@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
 sudo pacman -Syu --noconfirm wlsunset fzf yay gnome-calculator imv evince localsend
 
 if ! [[ -e "$FEATHERP/user-selected.packages" ]]; then
@@ -20,3 +21,9 @@ pkg_installed localsend && source "$FEATHERPS/localsend.sh"
 
 # imv background
 pkg_installed imv && sudo sed -i "s/Exec=imv %F/Exec=imv -b checks %F/g" /usr/share/applications/imv.desktop || true
+
+# Gimp theme (I actually prefer plain dark theme here.)
+# pkg_installed gimp && source "$FEATHERPS/gimp.sh"
+
+# Krita theme (I actually prefer plain dark theme here.)
+# pkg_installed krita && source "$FEATHERPS/krita.sh"

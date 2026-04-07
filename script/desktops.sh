@@ -18,3 +18,8 @@ source "$FEATHERH/hide-desktop.sh" /usr/share/applications/qvidcap.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/qv4l2.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/vim.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/kvantummanager.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/avahi-discover.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/bssh.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/bvnc.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/lstopo.desktop
+source "$FEATHERH/hide-desktop.sh" /usr/share/applications/kvantummanager.desktop

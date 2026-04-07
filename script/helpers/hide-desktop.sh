@@ -17,14 +17,15 @@ grep_pattern="NoDisplay="
 echo "  Hiding $target"
 if [[ -w "$target" ]]; then # May need sudo for /usr/share
 	if grep -q "$grep_pattern" "$target"; then
-		sed -i "$sed_pattern" "$target"
+		sed -i "$sed_pattern" "$target" || true
 	else
 		echo "NoDisplay=true" >>"$target"
 	fi
 else
 	if grep -q "$grep_pattern" "$target"; then
-		sudo sed -i "$sed_pattern" "$target"
+		sudo sed -i "$sed_pattern" "$target" || true
 	else
 		echo "NoDisplay=true" | sudo tee -a "$target" >/dev/null
 	fi
 fi
+return 0

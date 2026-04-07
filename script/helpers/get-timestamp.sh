@@ -1,3 +1,6 @@
 #!/bin/bash
 
-[[ -z "${FEATHERSTAMP:-}" ]] && export FEATHERSTAMP=$(date +%s)
+if [[ -z "${FEATHERSTAMP:-}" ]]; then
+	FEATHERSTAMP=$(date +%s)
+	export FEATHERSTAMP
+fi
