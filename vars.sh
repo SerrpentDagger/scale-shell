@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export FEATHER_PATH="$HOME/.local/share/feathers-and-flame"
+export FEATHER_BACKUPS="$FEATHER_PATH/backups"
 export FEATHERS="$FEATHER_PATH/script"
 export FEATHERP="$FEATHERS/package-lists"
 export FEATHERH="$FEATHERS/helpers"

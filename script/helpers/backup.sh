@@ -13,7 +13,7 @@ target=$(realpath "$1")
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 source "$FEATHERH/get-timestamp.sh"
 
-feather_backup="$HOME/Documents/feathers-and-flame-back/$FEATHERSTAMP"
+feather_backup="$FEATHER_BACKUPS/$FEATHERSTAMP"
 dest="$feather_backup$target"
 echo "Backing up existing file to: $dest"
 mkdir -p "$(dirname "$dest")"

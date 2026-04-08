@@ -17,9 +17,12 @@ git pull
 # Check for config changes, query for update if so
 source "$FEATHERH/tmp-spawn.sh"
 source "$FEATHER_PATH/pull-changes.sh" --for-diff
-if ! diff -r --color --label="CURRENT" --label="NEW" "$FEATHERT/config" "$FEATHERC"; then
-	gum confirm "Update configs in-place? (Backups created in Documents/) Otherwise you can just copy them from the ./config directory here." && bash "$FEATHERS/configs.sh"
+source "$FEATHERS/configs.sh" --for-diff
+if ! diff -r --color --label="CURRENT" --label="NEW" "$FEATHERT/config" "$FEATHERT/feather"; then
+	gum confirm "Update configs in-place? (Backups created in $FEATHER_BACKUPS) Otherwise you can just copy them from the ./config directory here." && bash "$FEATHERS/configs.sh"
 fi
 source "$FEATHERH/tmp-clear.sh"
+
+source "$FEATHER_PATH/refresh.sh"
 
 source "$FEATHERH/show-done.sh"

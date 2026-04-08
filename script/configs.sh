@@ -1,20 +1,34 @@
 #!/bin/bash
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
+subdir="$HOME/.config"
+remove_themes=0
+if [[ "--for-diff" = "$1" ]]; then
+	subdir="$FEATHERT/feather"
+	remove_themes=1
+	shift
+fi
 
 cd "$FEATHERC" || exit 1
-source "$FEATHERH/back-cp.sh" niri ~/.config/niri
-source "$FEATHERH/back-cp.sh" noctalia ~/.config/noctalia
-source "$FEATHERH/back-cp.sh" nvim ~/.config/nvim
-source "$FEATHERH/back-cp.sh" alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
-source "$FEATHERH/back-cp.sh" qt/qt5ct.conf ~/.config/qt5ct/qt5ct.conf
-source "$FEATHERH/back-cp.sh" qt/qt6ct.conf ~/.config/qt6ct/qt6ct.conf
+source "$FEATHERH/back-cp.sh" niri "$subdir/niri"
+source "$FEATHERH/back-cp.sh" noctalia "$subdir/noctalia"
+source "$FEATHERH/back-cp.sh" nvim "$subdir/nvim"
+source "$FEATHERH/back-cp.sh" alacritty/alacritty.toml "$subdir/alacritty/alacritty.toml"
+source "$FEATHERH/back-cp.sh" qt/qt5ct.conf "$subdir/qt5ct/qt5ct.conf"
+source "$FEATHERH/back-cp.sh" qt/qt6ct.conf "$subdir/qt6ct/qt6ct.conf"
 
-source "$FEATHERH/sed-user.sh" ~/.config/noctalia/settings.json
-source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/misc.kdl
-source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/keybinds.kdl
-source "$FEATHERH/sed-user.sh" ~/.config/niri/cfg/hot-rules.kdl
-source "$FEATHERH/sed-user.sh" ~/.config/qt5ct/qt5ct.conf
-source "$FEATHERH/sed-user.sh" ~/.config/qt6ct/qt6ct.conf
+source "$FEATHERH/sed-user.sh" "$subdir/noctalia/settings.json"
+source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/misc.kdl"
+source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/keybinds.kdl"
+source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/hot-rules.kdl"
+source "$FEATHERH/sed-user.sh" "$subdir/qt5ct/qt5ct.conf"
+source "$FEATHERH/sed-user.sh" "$subdir/qt6ct/qt6ct.conf"
+
+if [[ "$remove_themes" -eq 1 ]]; then
+	rm "$subdir/noctalia/colors.json"
+	rm "$subdir/niri/noctalia.kdl"
+	rm "$subdir/nvim/lua/matugen.lua"
+	rm "$subdir/alacritty/themes/noctalia.toml"
+fi
 
 source "$FEATHERS/btop.sh"
