@@ -2,10 +2,10 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 subdir="$HOME/.config"
-remove_themes=0
+for_diff=0
 if [[ "--for-diff" = "$1" ]]; then
 	subdir="$FEATHERT/feather"
-	remove_themes=1
+	for_diff=1
 	shift
 fi
 
@@ -24,10 +24,10 @@ source "$FEATHERH/sed-user.sh" "$subdir/niri/cfg/hot-rules.kdl"
 source "$FEATHERH/sed-user.sh" "$subdir/qt5ct/qt5ct.conf"
 source "$FEATHERH/sed-user.sh" "$subdir/qt6ct/qt6ct.conf"
 
-if [[ "$remove_themes" -eq 1 ]]; then
+if [[ "$for_diff" -eq 1 ]]; then
 	rm "$subdir/noctalia/colors.json"
 	rm "$subdir/niri/noctalia.kdl"
 	rm "$subdir/nvim/lua/matugen.lua"
+else
+	source "$FEATHERS/btop.sh"
 fi
-
-source "$FEATHERS/btop.sh"
