@@ -16,20 +16,52 @@ source "$FEATHERH/show-logo.sh" -header
 # Clear tmp
 source "$FEATHERH/tmp-clear.sh"
 
+# Select
+selection_file="$FEATHER_PATH/selected_install.txt"
+if ! [[ -f "$selection_file" ]] || ! gum confirm "(Re)Install previously selected components?"; then
+	gum choose "System Packages: Upgrade system and install important packages (RECOMMENDED)" \
+		"Auto-login: Setup to skip typing your password twice on boot" \
+		"LazyVim: A gorgeous editor" \
+		"Mullvad Browser: A reasonably private browser for daily use" \
+		"Tor Browser: The anonymous browser" \
+		"Vintage Story: Uncompromising survival game (Semi-closed, requires paid account)" \
+		"TLP: Advanced power management (RECOMMENDED for laptops)" \
+		"Desktop Entries: Set up application menu and hide supurfluous entries" \
+		"Alacritty in Nautilus: Set up context menu entry for Nautilus" \
+		"Mimetypes: Default applications to open files (RECOMMENDED)" \
+		"Configs: Copy config files into place (RECOMMENDED)" \
+		--header "Select the desired components to install:" --no-limit --height=15 >"$selection_file"
+fi
+selection=""
+mapfile -t selection < <(grep -Po '^[^:]+(?=:)' "$selection_file")
+echo "The following will be installed:"
+for selected in "${selection[@]}"; do
+	echo "  · $selected"
+done
+if ! gum confirm "Proceed?"; then
+	echo "Cancelled by user."
+	exit 1
+fi
+
 # Install
-gum confirm "Install/Upgrade system packages?" && source "$FEATHERS/packages.sh" || true
-gum confirm "Setup auto-login?" && source "$FEATHERS/autologin.sh" || true
+for selected in "${selection[@]}"; do
+	case "$selected" in
+	System*) source "$FEATHERS/packages.sh" ;;
+	Auto-login) source "$FEATHERS/autologin.sh" ;;
 
-gum confirm "Install LazyVim?" && source "$FEATHERS/lazyvim.sh" || true
-gum confirm "Install Mullvad Browser?" && source "$FEATHERS/mullvad.sh" || true
-gum confirm "Install Tor Browser?" && source "$FEATHERS/mullvad.sh" tor || true
-gum confirm "Install VintageStory? (Semi-closed, requires paid account, flatpak)" && source "$FEATHERS/vintagestory.sh" || true
-gum confirm "Install and enable TLP advanced power management? (Recommended for laptops)" && source "$FEATHERS/tlp.sh" || true
+	LazyVim) source "$FEATHERS/lazyvim.sh" ;;
+	Mullvad*) source "$FEATHERS/mullvad.sh" ;;
+	Tor*) source "$FEATHERS/mullvad.sh" tor ;;
+	Vintage*) source "$FEATHERS/vintagestory.sh" ;;
+	TLP) source "$FEATHERS/tlp.sh" ;;
 
-gum confirm "Setup .desktop entries and hide supurfluous ones?" && source "$FEATHERS/desktops.sh" || true
+	Desktop*) source "$FEATHERS/desktops.sh" ;;
 
-gum confirm "Setup Alacritty context menu entry for Nautilus?" && source "$FEATHERS/gnome-terminal.sh" || true
-gum confirm "Setup mimetypes?" && source "$FEATHERS/mimetypes.sh" || true
-gum confirm "Copy configs into place?" && source "$FEATHERS/configs.sh" || true
+	Alacritty*) source "$FEATHERS/gnome-terminal.sh" ;;
+	Mimetypes) source "$FEATHERS/mimetypes.sh" ;;
+	Configs) source "$FEATHERS/configs.sh" ;;
+	*) echo "Unrecognised installation instruction $selected! Exiting." ;;
+	esac
+done
 
 source "$FEATHERH/show-done.sh"

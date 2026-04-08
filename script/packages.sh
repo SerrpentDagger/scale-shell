@@ -1,9 +1,21 @@
 #!/bin/bash
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
+echo "Updating system and installing important packages..."
 sudo pacman -Syu --noconfirm wlsunset fzf yay gnome-calculator imv mpv evince localsend
 
-if ! [[ -e "$FEATHERP/user-selected.packages" ]]; then
+selection_file="$FEATHERP/user-selected.packages"
+selection_file_aur="$FEATHERP/user-selected-aur.packages"
+trigger_choice=0
+if ! [[ -e "$selection_file" || -e "$selection_file_aur" ]]; then
+	trigger_choice=1
+elif ! gum confirm "(Re)Install previously selected packages?"; then
+	trigger_choice=1
+	rm -f "$selection_file"
+	rm -f "$selection_file_aur"
+fi
+
+if [[ $trigger_choice -eq 1 ]]; then
 	source "$FEATHERS/select-install.sh" sys-extra.packages 'extra system'
 	source "$FEATHERS/select-install.sh" media.packages 'media/communications'
 	source "$FEATHERS/select-install.sh" aur.packages 'AUR'
