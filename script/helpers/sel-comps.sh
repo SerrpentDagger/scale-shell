@@ -13,6 +13,7 @@ if [[ "generate" == "$1" ]]; then
 			"Vintage Story: Uncompromising survival game (Semi-closed, requires paid account)" \
 			"TLP: Advanced power management (RECOMMENDED for laptops)" \
 			"Desktop Entries: Set up application menu and hide supurfluous entries" \
+			"Wallpapers: Download some nice wallpapers to get started with (sha256sum verified)" \
 			"Alacritty in Nautilus: Set up context menu entry for Nautilus" \
 			"Mimetypes: Default applications to open files (RECOMMENDED)" \
 			"Configs: Copy config files into place (RECOMMENDED)" \
