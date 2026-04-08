@@ -28,7 +28,6 @@ if [[ "$remove_themes" -eq 1 ]]; then
 	rm "$subdir/noctalia/colors.json"
 	rm "$subdir/niri/noctalia.kdl"
 	rm "$subdir/nvim/lua/matugen.lua"
-	rm "$subdir/alacritty/themes/noctalia.toml"
 fi
 
 source "$FEATHERS/btop.sh"
