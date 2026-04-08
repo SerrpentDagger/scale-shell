@@ -1,2 +1,5 @@
-goose-pond https://w.wallhaven.cc/full/ly/wallhaven-lywpjl.jpg 132191b1ac9e4f560301269eb781d89ffe36b9c015f82685db528cb0814f1cd6
-
+wallpaper/goose-pond.jpg https://w.wallhaven.cc/full/ly/wallhaven-lywpjl.jpg 132191b1ac9e4f560301269eb781d89ffe36b9c015f82685db528cb0814f1cd6
+wallpaper/firefly-path.png https://w.wallhaven.cc/full/73/wallhaven-7317w3.png 97bfdeb5f85616878aa3b9dca363a32f5b338700e344ec91b608bed6d03688d0
+wallpaper/sunset-mountains.jpg https://w.wallhaven.cc/full/96/wallhaven-969kvd.jpg 3b1b907281197259f07e94505d4b10080054b17be40dc2e8079941e73b21a2df
+wallpaper/lakeside-village.jpg https://w.wallhaven.cc/full/e8/wallhaven-e8eyow.jpg acc2ae4d08653466089fc2305a3df150b8d4b901fd578fce194b74ef6a841a47
+wallpaper/moonlit-night.jpg https://w.wallhaven.cc/full/21/wallhaven-21el7m.jpg 4986f3fa70e1060a4d021729e61df0ccbb40ff68f0ce2fdc908c8b740d9e76ef

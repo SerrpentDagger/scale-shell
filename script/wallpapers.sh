@@ -5,6 +5,7 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 wall_file="$FEATHERX/wallpapers.txt"
 trap 'source "$FEATHERH/tmp-clear.sh"' EXIT
 source "$FEATHERH/tmp-spawn.sh"
+cd "$FEATHER_PATH" || exit 1
 
 while IFS= read -r line || [[ -n "$line" ]]; do
 	read -r NAME URL EXP_SHA <<<"$line"
@@ -15,6 +16,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
 	fi
 
 	target="$FEATHERT/$NAME"
+	mkdir -p "$(dirname "$target")"
 	echo "Downloading $URL to $target"
 	if ! curl -fsSL "$URL" -o "$target"; then
 		echo "Download failed for $URL" >&2
