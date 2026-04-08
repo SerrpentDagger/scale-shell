@@ -42,7 +42,7 @@ for selected in "${FI_SELECTION[@]}"; do
 	TLP) source "$FEATHERS/tlp.sh" ;;
 
 	Desktop*) source "$FEATHERS/desktops.sh" ;;
-	Wallpapers) source "$FEATHERS/Wallpapers.sh" ;;
+	Wallpapers) source "$FEATHERS/wallpapers.sh" ;;
 
 	Alacritty*) source "$FEATHERS/gnome-terminal.sh" ;;
 	Mimetypes) source "$FEATHERS/mimetypes.sh" ;;

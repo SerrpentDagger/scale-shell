@@ -1,7 +1,9 @@
 #!/bin/bash
 
+source "$HOME/.local/share/feathers-and-flame/vars.sh"
+
 echo "Install tlp power management"
-sudo pacman -Run --noconfirm power-profiles-daemon
+pacman -Q power-profiles-daemon 2>/dev/null && sudo pacman -Run --noconfirm power-profiles-daemon
 sudo pacman -S --noconfirm --needed tlp tlp-pd tlp-rdw tlpui || return 1
 echo "Enable/mask relevant services"
 sudo systemctl enable tlp.service || return 1
