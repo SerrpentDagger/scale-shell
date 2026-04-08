@@ -14,3 +14,6 @@ selected_install.txt
 # Ignore wallpaper changes
 wallpaper
 wallpaper-presets/*
+
+# Ignore config backups
+backups
