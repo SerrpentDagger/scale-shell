@@ -15,4 +15,3 @@ export FEATHERX="$FEATHER_PATH/textual"
 
 export NIRI_CONFIG="$HOME/.config/niri"
 export NIRI_CONFIG_CFG="$NIRI_CONFIG/cfg"
-# export NIRI_CONFIG_HOT="$NIRI_CONFIG_CFG/hot-rules"
