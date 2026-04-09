@@ -18,7 +18,7 @@ binds {
     Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh random"; }
 		Mod+Shift+U hotkey-overlay-title="Update Feathers and Flame" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/update.sh"; }
 		Mod+V hotkey-overlay-title="Activate Screensaver" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh"; }
-		Mod+Shift+V hotkey-overlay-title="Activate Screensaver (Current Monitor)" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh --current"; }
+		Mod+Shift+V hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh --current"; }
 		Mod+Shift+Ctrl+Q hotkey-overlay-title="Restart Noctalia" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noctalia-restart.sh"; }
     // Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
 		// Mod+Shift+1			{ spawn-sh "qs -c noctalia-shell ipc call wallpaper set /home/serpent/.local/share/feathers-and-flame/wallpaper-presets/1.* $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
@@ -54,6 +54,7 @@ binds {
     Mod+E                               hotkey-overlay-title="File Manager" { spawn-sh "nautilus"; }
 		Mod+Shift+E													hotkey-overlay-title="File Manager (Stars)" { spawn-sh "nautilus starred:///"; }
     Mod+Shift+C                         hotkey-overlay-title="System Monitor" { spawn-sh "alacritty -e btop"; }
+    Mod+Shift+I                         hotkey-overlay-title="Network Monitor" { spawn-sh "alacritty -e nethogs -d 0.2"; }
     Mod+Shift+G                         hotkey-overlay-title="GPU Monitor" { spawn-sh "alacritty -e nvtop"; }
     xF86Calculator { spawn-sh "gnome-calculator"; }
     // Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e bash /home/serpent/.local/share/feathers-and-flame/script/triggers/pkg_install.sh"; }
