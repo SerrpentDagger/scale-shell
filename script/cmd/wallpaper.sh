@@ -29,6 +29,10 @@ get_random_file_or_return_path() {
 	fi
 }
 
+scheme-from-wallpaper() {
+	basename "$1" | grep -Po "_\\K[a-zA-Z ()]+"
+}
+
 if [[ $1 == "hook" ]]; then
 	# Refresh gnome stuff to dark theme
 	gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
@@ -36,7 +40,7 @@ if [[ $1 == "hook" ]]; then
 	exit 0
 fi
 
-temp_name="FEATHER_TEMP_BACKGROUND_"
+temp_name="FEATHER-TEMP-BACKGROUND-"
 # Remove old temp files
 rm "$FEATHERW/$temp_name"* &>/dev/null || true
 if [[ $1 == "random" ]]; then
@@ -44,7 +48,7 @@ if [[ $1 == "random" ]]; then
 elif [[ $1 == "preset" ]]; then
 	chosen_preset="$(get_random_file_or_return_path "$FEATHERWP/$2")"
 	# Ensure different name for new background, else noctalia ignores
-	target="$FEATHERW/$temp_name$FEATHERSTAMP"
+	target="$FEATHERW/$temp_name$FEATHERSTAMP$(basename "$chosen_preset")"
 	# Have to put them in the wallpaper directory first
 	if [[ -e "$chosen_preset" ]]; then
 		cp "$chosen_preset" "$target"
@@ -57,3 +61,8 @@ fi
 for out in $(get-active-monitor); do
 	qs -c noctalia-shell ipc call wallpaper set "$wallpaper" "$out"
 done
+sleep 1
+scheme="$(scheme-from-wallpaper "$wallpaper")"
+if [[ -n "$scheme" ]]; then
+	qs -c noctalia-shell ipc call colorScheme set "$scheme"
+fi
