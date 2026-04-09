@@ -16,7 +16,7 @@
         "enableWindowsSearch": true,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "overviewLayer": false,
+        "overviewLayer": true,
         "pinnedApps": [
         ],
         "position": "center",
@@ -420,7 +420,7 @@
         "wallpaperChange": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
     },
     "idle": {
-        "customCommands": "[{\"name\":\"Screensaver\",\"timeout\":120,\"command\":\"bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh\",\"resumeCommand\":\"\"}]",
+        "customCommands": "[{\"name\":\"Screensaver\",\"timeout\":480,\"command\":\"bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh\",\"resumeCommand\":\"\"}]",
         "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",

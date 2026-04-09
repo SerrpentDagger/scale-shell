@@ -64,6 +64,7 @@ window-rule {
 		match app-id="vlc" title="Current Media Information"
 		match app-id="Tor Browser" title="Close Tor Browser"
 		match app-id="gimp" title="Preferences"
+		match app-id="org.gnome.DejaDup"
 
     open-floating true
 }

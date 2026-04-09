@@ -9,6 +9,7 @@ environment {
     XDG_CURRENT_DESKTOP "niri"
     XDG_DATA_HOME "/home/serpent/.local/share"
     QT_QPA_PLATFORMTHEME "qt6ct"
+		QS_ICON_THEME "Adwaita"
 }
 
 debug {
