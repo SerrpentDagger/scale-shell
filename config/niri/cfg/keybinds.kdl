@@ -12,17 +12,17 @@ binds {
     // See available: qs -c noctalia-shell ipc show
     Mod+S hotkey-overlay-title="Toggle Noctalia Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Mod+P hotkey-overlay-title="Cycle Power Profile" { spawn-sh "qs -c noctalia-shell ipc call powerProfile cycle"; }
-    Mod+Comma hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call notifications dismissAll"; }
+    Mod+Comma hotkey-overlay-title="Dismiss Notifications						( <span background=\"#303030\"><tt>+Shift</tt></span>: Clear )" { spawn-sh "qs -c noctalia-shell ipc call notifications dismissAll"; }
 		Mod+Shift+Comma hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call notifications clear"; }
     Mod+Shift+Space hotkey-overlay-title="Toggle Noctalia Bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
-    Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh random"; }
-		Mod+Shift+U hotkey-overlay-title="Update Feathers and Flame" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/update.sh"; }
-		Mod+V hotkey-overlay-title="Activate Screensaver" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh"; }
+    Mod+Ctrl+Space hotkey-overlay-title="Random Wallpaper" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh random"; }
+		Mod+Shift+U hotkey-overlay-title="<b>Update Feathers and Flame</b>" { spawn-sh "alacritty --class=com.serpentdagger.feathers-update -e bash /home/serpent/.local/share/feathers-and-flame/update.sh"; }
+		Mod+V hotkey-overlay-title="Activate Screensaver						( <span background=\"#303030\"><tt>+Shift</tt></span>: Current Monitor )" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh"; }
 		Mod+Shift+V hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh --current"; }
-		Mod+Shift+Ctrl+Q hotkey-overlay-title="Restart Noctalia" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noctalia-restart.sh"; }
+		Mod+Shift+Ctrl+Q hotkey-overlay-title="<b>Restart Noctalia</b>" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noctalia-restart.sh"; }
     // Mod+Ctrl+Space hotkey-overlay-title="Random Background" { spawn-sh "qs -c noctalia-shell ipc call wallpaper random $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
 		// Mod+Shift+1			{ spawn-sh "qs -c noctalia-shell ipc call wallpaper set /home/serpent/.local/share/feathers-and-flame/wallpaper-presets/1.* $(niri msg focused-output | grep -Po \"Output.*\\(\\K[^\\)]+\")"; }
-    Mod+Shift+1 hotkey-overlay-title="Wallpaper Favourite 1 (through 0)" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 1"; }
+    Mod+Shift+1 hotkey-overlay-title="Wallpaper Favourite 1					( <span background=\"#303030\"><tt>Numbers</tt></span> )" { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 1"; }
     Mod+Shift+2 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 2"; }
     Mod+Shift+3 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 3"; }
     Mod+Shift+4 hotkey-overlay-title=null { spawn-sh "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh preset 4"; }
@@ -42,26 +42,26 @@ binds {
 
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
-    Mod+Space                           hotkey-overlay-title="Open App Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+B                               hotkey-overlay-title="Open Browser" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
-		Mod+Shift+B													hotkey-overlay-title="Open Private Browser" { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
+    Mod+Space                           hotkey-overlay-title="<b>Open App Launcher</b>" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+B                               hotkey-overlay-title="Open Browser							( <span background=\"#303030\"><tt>+Shift</tt></span>: Private )" { spawn "~/.local/share/applications/start-mullvad-browser.desktop"; }
+		Mod+Shift+B													hotkey-overlay-title=null { spawn "~/.local/share/applications/start-tor-browser.desktop"; }
     Mod+Shift+O                         hotkey-overlay-title="Lock Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Escape                          repeat=false hotkey-overlay-title="Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 		Mod+G 															hotkey-overlay-title="Open Gimp" { spawn "gimp"; }
 		// Mod+Shift+G 															hotkey-overlay-title="Open Krita" { spawn "krita"; }
-		Mod+Y																hotkey-overlay-title="Open FreeTube (YT-viewer)" { spawn "freetube"; }
+		Mod+Y																hotkey-overlay-title="Open FreeTube YT-viewer" { spawn "freetube"; }
 
-    Mod+E                               hotkey-overlay-title="File Manager" { spawn-sh "nautilus"; }
-		Mod+Shift+E													hotkey-overlay-title="File Manager (Stars)" { spawn-sh "nautilus starred:///"; }
-    Mod+Shift+C                         hotkey-overlay-title="System Monitor" { spawn-sh "alacritty -e btop"; }
-    Mod+Shift+I                         hotkey-overlay-title="Network Monitor" { spawn-sh "alacritty -e nethogs -d 0.2"; }
-    Mod+Shift+G                         hotkey-overlay-title="GPU Monitor" { spawn-sh "alacritty -e nvtop"; }
+    Mod+E                               hotkey-overlay-title="File Manager							( <span background=\"#303030\"><tt>+Shift</tt></span>: Starred )" { spawn-sh "nautilus"; }
+		Mod+Shift+E													hotkey-overlay-title=null { spawn-sh "nautilus starred:///"; }
+    Mod+Shift+C                         hotkey-overlay-title="<b>System Monitor</b>							( <span background=\"#303030\"><tt>I</tt></span>: Internet,  <span background=\"#303030\"><tt>G</tt></span>: GPU )" { spawn-sh "alacritty -e btop"; }
+    Mod+Shift+I                         hotkey-overlay-title=null { spawn-sh "alacritty -e nethogs -d 0.2"; }
+    Mod+Shift+G                         hotkey-overlay-title=null { spawn-sh "alacritty -e nvtop"; }
     xF86Calculator { spawn-sh "gnome-calculator"; }
     // Mod+Shift+I                         hotkey-overlay-title="Install Package" { spawn-sh "alacritty -e bash /home/serpent/.local/share/feathers-and-flame/script/triggers/pkg_install.sh"; }
 		Mod+N																hotkey-overlay-title="Open LazyVim" { spawn-sh "alacritty -e nvim"; }
-		Mod+Ctrl+S													hotkey-overlay-title="Share File (LocalSend)" { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh file"; }
-		Mod+Shift+S													hotkey-overlay-title="Share Folder (LocalSend)" { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh folder"; }
-		Mod+Alt+S														hotkey-overlay-title="Share Clipboard (LocalSend)" { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh clipboard"; }
+		Mod+Ctrl+S													hotkey-overlay-title="LocalSend Share File						( <span background=\"#303030\"><tt>Shift</tt></span>: Folder,  <span background=\"#303030\"><tt>Alt</tt></span>: Clipboard )" { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh file"; }
+		Mod+Shift+S													hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh folder"; }
+		Mod+Alt+S														hotkey-overlay-title=null { spawn-sh "alacritty -e bash ~/.local/share/feathers-and-flame/script/cmd/share.sh clipboard"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
@@ -82,7 +82,7 @@ binds {
     Mod+W                               { close-window; }
     Mod+O                               repeat=false { toggle-overview; }
 
-    Mod+Left                            { focus-column-or-monitor-left; }
+    Mod+Left                            hotkey-overlay-title="Switch Focus							( <span background=\"#303030\"><tt>Arrows</tt></span>, <span background=\"#303030\"><tt>HJKL</tt></span> )" { focus-column-or-monitor-left; }
     Mod+H                               { focus-column-or-monitor-left; }
     Mod+Right                           { focus-column-or-monitor-right; }
     Mod+L                               { focus-column-or-monitor-right; }
@@ -91,7 +91,7 @@ binds {
     Mod+Down                            { focus-window-or-workspace-down; }
     Mod+J                               { focus-window-or-workspace-down; }
 
-    Mod+CTRL+Left                       { move-column-left-or-to-monitor-left; }
+    Mod+CTRL+Left                       hotkey-overlay-title="Move Focused							( <span background=\"#303030\"><tt>Arrows</tt></span>, <span background=\"#303030\"><tt>HJKL</tt></span> )" { move-column-left-or-to-monitor-left; }
     Mod+CTRL+H                          { move-column-left-or-to-monitor-left; }
     Mod+CTRL+Right                      { move-column-right-or-to-monitor-right; }
     Mod+CTRL+L                          { move-column-right-or-to-monitor-right; }
@@ -100,9 +100,9 @@ binds {
     Mod+CTRL+Down                       { move-window-down-or-to-workspace-down; }
     Mod+CTRL+J                          { move-window-down-or-to-workspace-down; }
 
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
-    Mod+Backslash  { consume-window-into-column; }
+    Mod+BracketLeft  hotkey-overlay-title="Consume or Expell Window Left			(  <span background=\"#303030\"><tt>]</tt></span>: Right )" { consume-or-expel-window-left; }
+    Mod+BracketRight hotkey-overlay-title=null { consume-or-expel-window-right; }
+    Mod+Backslash  hotkey-overlay-title="Consume Window Into Column			( <span background=\"#303030\"><tt>+Shift</tt></span>: Expell )" { consume-window-into-column; }
     Mod+Shift+Backslash { expel-window-from-column; }
 
     Mod+Home                            { focus-column-first; }
@@ -134,22 +134,22 @@ binds {
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
 
     // ─── Workspace Switching ───
-    Mod+WheelScrollDown                 cooldown-ms=150 { focus-workspace-down; }
-    Mod+WheelScrollUp                   cooldown-ms=150 { focus-workspace-up; }
-    Mod+CTRL+WheelScrollDown            cooldown-ms=150 { move-column-to-workspace-down; }
-    Mod+CTRL+WheelScrollUp              cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+WheelScrollDown                 hotkey-overlay-title="Switch Workspace Down					( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp                   hotkey-overlay-title=null cooldown-ms=150 { focus-workspace-up; }
+    Mod+CTRL+WheelScrollDown            hotkey-overlay-title="Move Column to Workspace Down			( <span background=\"#303030\"><tt>Up</tt></span>, <span background=\"#303030\"><tt>Left</tt></span>, <span background=\"#303030\"><tt>Right</tt></span> )" cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+CTRL+WheelScrollUp              hotkey-overlay-title=null cooldown-ms=150 { move-column-to-workspace-up; }
 
-    Mod+WheelScrollRight                { focus-column-right; }
+    Mod+WheelScrollRight                hotkey-overlay-title=null { focus-column-right; }
     Mod+WheelScrollLeft                 { focus-column-left; }
-    Mod+CTRL+WheelScrollRight           { move-column-right; }
+    Mod+CTRL+WheelScrollRight           hotkey-overlay-title=null { move-column-right; }
     Mod+CTRL+WheelScrollLeft            { move-column-left; }
 
     Mod+Shift+WheelScrollDown           { focus-column-right; }
-    Mod+Shift+WheelScrollUp             { focus-column-left; }
+    Mod+Shift+WheelScrollUp             hotkey-overlay-title=null { focus-column-left; }
     Mod+CTRL+Shift+WheelScrollDown      { move-column-right; }
-    Mod+CTRL+Shift+WheelScrollUp        { move-column-left; }
+    Mod+CTRL+Shift+WheelScrollUp        hotkey-overlay-title=null { move-column-left; }
 
-    Mod+1                               { focus-workspace 1; }
+    Mod+1                               hotkey-overlay-title="Switch to Workspace 1					( <span background=\"#303030\"><tt>Numbers</tt></span> )" { focus-workspace 1; }
     Mod+2                               { focus-workspace 2; }
     Mod+3                               { focus-workspace 3; }
     Mod+4                               { focus-workspace 4; }
@@ -159,7 +159,7 @@ binds {
     Mod+8                               { focus-workspace 8; }
     Mod+9                               { focus-workspace 9; }
 
-    Mod+CTRL+1                          { move-column-to-workspace 1; }
+    Mod+CTRL+1                          hotkey-overlay-title="Move Columnt to Workspace 1			( <span background=\"#303030\"><tt>Numbers</tt></span> )" { move-column-to-workspace 1; }
     Mod+CTRL+2                          { move-column-to-workspace 2; }
     Mod+CTRL+3                          { move-column-to-workspace 3; }
     Mod+CTRL+4                          { move-column-to-workspace 4; }
@@ -169,7 +169,7 @@ binds {
     Mod+CTRL+8                          { move-column-to-workspace 8; }
     Mod+CTRL+9                          { move-column-to-workspace 9; }
 
-    Mod+TAB                             { focus-workspace-previous; }
+    Mod+TAB                             hotkey-overlay-title="Switch to Previous Workspace" { focus-workspace-previous; }
 
     // ─── Layout Controls ───
     Mod+F                               { maximize-column; }
@@ -184,22 +184,22 @@ binds {
 
 
     // ─── Modes ───
-    Mod+Shift+T                               { toggle-window-floating; }
+    Mod+Ctrl+T                               { toggle-window-floating; }
     Mod+T                         { switch-focus-between-floating-and-tiling; }
-    Mod+Shift+F                         { fullscreen-window; }
+    Mod+Shift+F                         hotkey-overlay-title="Fullscreen Window" { fullscreen-window; }
     Mod+Q                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
-    Print { screenshot; }
+    Print hotkey-overlay-title="Take a Screenshot						( <span background=\"#303030\"><tt>+Ctrl</tt></span>: Screen,  <span background=\"#303030\"><tt>+Alt</tt></span>: Window )" { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
     // ─── Emergency Escape Key ───
     // Use this when a fullscreen app blocks your keybinds.
     // It disables any active keyboard shortcut inhibitor, restoring control.
-    Mod+Shift+Q                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Shift+Q                          hotkey-overlay-title="<b>Reclaim Keyboard Control</b>" allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // ─── Exit / Power ───
     CTRL+ALT+Delete                     { quit; } // Also quits Niri
-    Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
+    Mod+Shift+P                         hotkey-overlay-title="Power Off Moniters" { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
 }
