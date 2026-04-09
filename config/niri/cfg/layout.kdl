@@ -12,4 +12,8 @@
         }
 
         struts {}
+
+				focus-ring {
+					width 3
+				}
     }

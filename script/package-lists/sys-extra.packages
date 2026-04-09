@@ -16,6 +16,10 @@ sqlitebrowser
 
 # Versatile and cool gpu monitor
 nvtop
+nethogs
+
+# Slick backups
+deja-dup
 
 # Network analyser
 wireshark-cli
