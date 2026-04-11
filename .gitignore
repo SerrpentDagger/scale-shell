@@ -17,3 +17,6 @@ wallpaper-presets/*
 
 # Ignore config backups
 backups
+
+# Ignore state
+helpers/state

@@ -6,3 +6,7 @@ wallpaper/moonlit-night.jpg https://w.wallhaven.cc/full/21/wallhaven-21el7m.jpg 
 wallpaper/aetheria-cosmos.jpg https://raw.githubusercontent.com/JJDizz1L/aetheria/refs/heads/omarchy-aetheria-theme/backgrounds/aetheria-1-4k%40.jpg 6e930f9455bf9e24a71d394c4c883f8ca8f2335f0ab0982f0f98675b425b97f2
 wallpaper/drake-canyon.jpg https://w.wallhaven.cc/full/ym/wallhaven-yme18g.jpg db759ea171abe9c4949f818e7d24c3ebd21dabbfdb3ffeebbee0f6bfe5cd09a7
 wallpaper/mystic-tree.png https://w.wallhaven.cc/full/yj/wallhaven-yjr9y7.png dc3823abc9c7b62107e2b799bf9398a10bacfa527cbad0a0ed7e12a70306ab46
+wallpaper/selective-bloom.jpg https://w.wallhaven.cc/full/wy/wallhaven-wyqg8q.jpg 0e6273144acfeba85ab70da0b5d94f152a2b9fd8aaa360e24faeae2a486de9d1
+wallpaper/selective-seeds.jpg https://w.wallhaven.cc/full/0j/wallhaven-0j1mwp.jpg 8635a1838fba66aca9363d13deab5917b2ccfc0d96f0688266ec8d0ac03bafcd
+wallpaper/selective-leopard.jpg https://w.wallhaven.cc/full/48/wallhaven-4851go.jpg c3959852acd190ab40d1c11c3dae1511858e2be045f26adf903defcf0206243d
+wallpaper/selective-lion.jpg https://w.wallhaven.cc/full/p8/wallhaven-p8mz7j.jpg 0e7d9c2e121ea955f4ca446d34737d5f06b7327c749f41a5a03d542a393c2f41

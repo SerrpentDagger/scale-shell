@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
-source "$FEATHERH/get-timestamp.sh"
 
 if [[ $# -lt 1 ]]; then
 	echo "Usage: bash wallpaper.sh <random|preset NUM|hook>"
@@ -34,9 +33,28 @@ scheme-from-wallpaper() {
 }
 
 if [[ $1 == "hook" ]]; then
+	fetch_monitor=$(get-active-monitor | grep -m 1 ".")
+	wallpaper="$(qs -c noctalia-shell ipc call wallpaper get "$fetch_monitor")"
+	scheme="$(scheme-from-wallpaper "$wallpaper")"
+	SCHEME_PREF="FEATHER_COLOR_SCHEME_"
+	if [[ -n "$scheme" ]]; then
+		if source "$FEATHERH/state.sh" check "$SCHEME_PREF$scheme"; then
+			exit 0
+		else
+			source "$FEATHERH/state.sh" clear "$SCHEME_PREF"*
+			source "$FEATHERH/state.sh" set "$SCHEME_PREF$scheme"
+		fi
+		sleep 1
+		qs -c noctalia-shell ipc call colorScheme set "$scheme"
+	else
+		source "$FEATHERH/state.sh" clear "$SCHEME_PREF"*
+	fi
+	sleep 1.5
+
 	# Refresh gnome stuff to dark theme
 	gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
 	gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+
 	exit 0
 fi
 
@@ -48,7 +66,7 @@ if [[ $1 == "random" ]]; then
 elif [[ $1 == "preset" ]]; then
 	chosen_preset="$(get_random_file_or_return_path "$FEATHERWP/$2")"
 	# Ensure different name for new background, else noctalia ignores
-	target="$FEATHERW/$temp_name$FEATHERSTAMP$(basename "$chosen_preset")"
+	target="$FEATHERW/$temp_name$(basename "$chosen_preset")"
 	# Have to put them in the wallpaper directory first
 	if [[ -e "$chosen_preset" ]]; then
 		cp "$chosen_preset" "$target"
@@ -61,8 +79,3 @@ fi
 for out in $(get-active-monitor); do
 	qs -c noctalia-shell ipc call wallpaper set "$wallpaper" "$out"
 done
-sleep 1
-scheme="$(scheme-from-wallpaper "$wallpaper")"
-if [[ -n "$scheme" ]]; then
-	qs -c noctalia-shell ipc call colorScheme set "$scheme"
-fi
