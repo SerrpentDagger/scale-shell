@@ -19,4 +19,4 @@ wallpaper-presets/*
 backups
 
 # Ignore state
-helpers/state
+script/helpers/state

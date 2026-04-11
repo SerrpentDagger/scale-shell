@@ -16,10 +16,10 @@ fi
 if [[ $1 == "set" ]]; then
 	touch "$FEATHERSTATE/$2"
 elif [[ $1 == "clear" ]]; then
-	[[ -f "$FEATHERSTATE/$2" ]] && rm "$FEATHERSTATE/$2"
+	rm "$FEATHERSTATE/$2"*
 	# [[ -d "$FEATHERSTATE/$2" ]] && rm -r "${FEATHERSTATE:?}/$2"
 elif [[ $1 == "check" ]]; then
-	[[ -f "$FEATHERSTATE" ]] && return 0
+	[[ -f "$FEATHERSTATE/$2" ]] && return 0
 	return 1
 fi
 return 0

@@ -41,13 +41,13 @@ if [[ $1 == "hook" ]]; then
 		if source "$FEATHERH/state.sh" check "$SCHEME_PREF$scheme"; then
 			exit 0
 		else
-			source "$FEATHERH/state.sh" clear "$SCHEME_PREF"*
+			source "$FEATHERH/state.sh" clear "$SCHEME_PREF"
 			source "$FEATHERH/state.sh" set "$SCHEME_PREF$scheme"
 		fi
-		sleep 1
+		sleep 3
 		qs -c noctalia-shell ipc call colorScheme set "$scheme"
 	else
-		source "$FEATHERH/state.sh" clear "$SCHEME_PREF"*
+		source "$FEATHERH/state.sh" clear "$SCHEME_PREF"
 	fi
 	sleep 1.5
 
