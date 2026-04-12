@@ -5,7 +5,6 @@ sudo pacman -S --noconfirm --needed gamemode lib32-gamemode
 echo "Adding $USER to gamemode group"
 sudo usermod -aG gamemode "$USER"
 
-echo "Backing-up and copying config file into place"
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 gm_dir="/usr/share/gamemode"

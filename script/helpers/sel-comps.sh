@@ -12,6 +12,7 @@ if [[ "generate" == "$1" ]]; then
 			"Mullvad Browser: A reasonably private browser for daily use" \
 			"Tor Browser: The anonymous browser" \
 			"TLP: Advanced power management (RECOMMENDED for laptops)" \
+			"Gamemode: Run games with performance optimisations using the gamemoderun command" \
 			"Desktop Entries: Set up application menu and hide supurfluous entries" \
 			"Wallpapers: Download some nice wallpapers to get started with (sha256sum verified)" \
 			"Alacritty in Nautilus: Set up context menu entry for Nautilus" \

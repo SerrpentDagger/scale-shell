@@ -40,6 +40,7 @@ for selected in "${FI_SELECTION[@]}"; do
 	Tor*) source "$FEATHERS/mullvad.sh" tor ;;
 	Vintage*) source "$FEATHERS/vintagestory.sh" ;;
 	TLP) source "$FEATHERS/tlp.sh" ;;
+	Gamemode) source "$FEATHERS/gamemode.sh" ;;
 
 	Desktop*) source "$FEATHERS/desktops.sh" ;;
 	Wallpapers) source "$FEATHERS/wallpapers.sh" ;;
@@ -51,4 +52,9 @@ for selected in "${FI_SELECTION[@]}"; do
 	esac
 done
 
-source "$FEATHERH/show-done.sh"
+echo "It is recommended to reboot after installation!"
+if gum confirm --affirmative "Reboot Now" --negative "" ""; then
+	systemctl reboot --no-wall
+else
+	source "$FEATHERH/show-done.sh"
+fi
