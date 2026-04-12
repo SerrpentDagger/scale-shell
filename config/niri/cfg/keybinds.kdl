@@ -128,6 +128,15 @@ binds {
     Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
+		Mod+Shift+Ctrl+Alt+Down hotkey-overlay-title="Move Focused Workspace Down			( <span background=\"#303030\"><tt>Arrows</tt></span>, <span background=\"#303030\"><tt>HJKL</tt></span> )" { move-workspace-to-monitor-down; }
+		Mod+Shift+Ctrl+Alt+Up { move-workspace-to-monitor-up; }
+		Mod+Shift+Ctrl+Alt+Left { move-workspace-to-monitor-left; }
+		Mod+Shift+Ctrl+Alt+Right { move-workspace-to-monitor-right; }
+		Mod+Shift+Ctrl+Alt+J { move-workspace-to-monitor-down; }
+		Mod+Shift+Ctrl+Alt+K { move-workspace-to-monitor-up; }
+		Mod+Shift+Ctrl+Alt+H { move-workspace-to-monitor-left; }
+		Mod+Shift+Ctrl+Alt+L { move-workspace-to-monitor-right; }
+
     // Alternatively, there are commands to move just a single window:
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
     // And you can also move a whole workspace to another monitor:
