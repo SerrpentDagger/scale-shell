@@ -4,6 +4,8 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 selection_file="$FEATHERSTATE/selected_install.txt"
 pending_file="$FEATHERSTATE/pending_install.txt"
 
+mkdir -p "$FEATHERSTATE"
+
 # "Vintage Story: Uncompromising survival game (Semi-closed, requires paid account)" \
 if [[ "generate" == "$1" ]]; then
 	if ! [[ -f "$selection_file" ]] || ! gum confirm "(Re)Install previously selected components?"; then
