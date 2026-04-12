@@ -35,10 +35,10 @@ pkg_installed localsend && source "$FEATHERPS/localsend.sh"
 pkg_installed imv && sudo sed -i "s/Exec=imv %F/Exec=imv -b checks %F/g" /usr/share/applications/imv.desktop || true
 
 # KeePassXC theme
-pkg_installed keepassxc && source "$FEATHERH/back-cp.sh" "$FEATHERC/keepassxc/keepassxc.ini" "$HOME/.config/keepassxc"
+pkg_installed keepassxc && source "$FEATHERH/back-cp.sh" "$FEATHERC/keepassxc/keepassxc.ini" "$HOME/.config/keepassxc/keepassxc.ini"
 
 # Btop theme
-pkg_installed btop && source "$FEATHERH/back-cp.sh" "$FEATHERC/btop/btop.conf" "$HOME/.config/btop"
+pkg_installed btop && source "$FEATHERH/back-cp.sh" "$FEATHERC/btop/btop.conf" "$HOME/.config/btop/btop.conf"
 
 # Gimp theme (I actually prefer plain dark theme here.)
 # pkg_installed gimp && source "$FEATHERPS/gimp.sh"
