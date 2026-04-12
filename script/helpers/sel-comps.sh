@@ -21,7 +21,7 @@ if [[ "generate" == "$1" ]]; then
 			"Alacritty in Nautilus: Set up context menu entry for Nautilus" \
 			"Mimetypes: Default applications to open files (RECOMMENDED)" \
 			"Configs: Copy config files into place (RECOMMENDED)" \
-			--header "Select the desired components to install:" --no-limit --height=15 | tee "$selection_file" "$pending_file" >/dev/null
+			--header "Select the desired components to install:" --no-limit --height=10 | tee "$selection_file" "$pending_file" >/dev/null
 	fi
 else
 	if [[ "--pending" == "$1" ]]; then
