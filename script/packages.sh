@@ -2,7 +2,7 @@
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 echo "Updating system and installing important packages..."
-sudo pacman -Syu --noconfirm wlsunset fzf yay gnome-calculator imv mpv evince localsend
+sudo pacman -Syu --noconfirm wlsunset fzf yay qt6ct qt5ct gnome-calculator imv mpv evince localsend
 
 selection_file="$FEATHERP/user-selected.packages"
 selection_file_aur="$FEATHERP/user-selected-aur.packages"
@@ -35,7 +35,10 @@ pkg_installed localsend && source "$FEATHERPS/localsend.sh"
 pkg_installed imv && sudo sed -i "s/Exec=imv %F/Exec=imv -b checks %F/g" /usr/share/applications/imv.desktop || true
 
 # KeePassXC theme
-pkg_installed keepassxc && source "$FEATHERPS/keepass.sh"
+pkg_installed keepassxc && source "$FEATHERH/back-cp.sh" "$FEATHERC/keepassxc/keepassxc.ini" "$HOME/.config/keepassxc"
+
+# Btop theme
+pkg_installed btop && source "$FEATHERH/back-cp.sh" "$FEATHERC/btop/btop.conf" "$HOME/.config/btop"
 
 # Gimp theme (I actually prefer plain dark theme here.)
 # pkg_installed gimp && source "$FEATHERPS/gimp.sh"

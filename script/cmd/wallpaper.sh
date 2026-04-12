@@ -32,11 +32,11 @@ scheme-from-wallpaper() {
 	basename "$1" | grep -Po "_\\K[a-zA-Z ()]+"
 }
 
+SCHEME_PREF="FEATHER_COLOR_SCHEME_"
 if [[ $1 == "hook" ]]; then
 	fetch_monitor=$(get-active-monitor | grep -m 1 ".")
 	wallpaper="$(qs -c noctalia-shell ipc call wallpaper get "$fetch_monitor")"
 	scheme="$(scheme-from-wallpaper "$wallpaper")"
-	SCHEME_PREF="FEATHER_COLOR_SCHEME_"
 	if [[ -n "$scheme" ]]; then
 		if source "$FEATHERH/state.sh" check "$SCHEME_PREF$scheme"; then
 			exit 0
@@ -76,6 +76,7 @@ elif [[ $1 == "preset" ]]; then
 	fi
 	wallpaper="$target"
 fi
+source "$FEATHERH/state.sh" clear "$SCHEME_PREF"
 for out in $(get-active-monitor); do
 	qs -c noctalia-shell ipc call wallpaper set "$wallpaper" "$out"
 done
