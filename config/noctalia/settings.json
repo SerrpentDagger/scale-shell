@@ -236,7 +236,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Solarized",
+        "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -408,7 +408,7 @@
         "telemetryEnabled": false
     },
     "hooks": {
-        "colorGeneration": "",
+        "colorGeneration": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook",
         "darkModeChange": "",
         "enabled": true,
         "performanceModeDisabled": "",
@@ -417,7 +417,7 @@
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook"
+        "wallpaperChange": ""
     },
     "idle": {
         "customCommands": "[{\"name\":\"Screensaver\",\"timeout\":480,\"command\":\"bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh\",\"resumeCommand\":\"\"}]",
