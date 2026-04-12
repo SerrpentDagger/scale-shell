@@ -12,6 +12,7 @@ fi
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 source "$FEATHERH/show-logo.sh" -header
+source "$FEATHER_PATH/errors.sh"
 
 # Clear tmp
 source "$FEATHERH/tmp-clear.sh"
