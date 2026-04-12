@@ -12,5 +12,5 @@ wallpaper/selective-lion_Yellow AMOLED.jpg	https://w.wallhaven.cc/full/p8/wallha
 wallpaper/mars-horizon_Oxide.png https://github.com/steve-lohmeyer/omarchy-mars-theme/blob/master/backgrounds/mars-3.png cb5c510a7c26c7b53e97b3470cdf8f6e1970abbd4c12dbefc267e912cf2b0846
 wallpaper/rainy-night_Catppuccin.png https://github.com/atif-1402/omarchy-rainynight-theme/blob/main/backgrounds/1.png 18932e91a92371748fdde0609a5d3afbd40544d23392038239eeb608e07bc363
 wallpaper/artemis-earthrise_Nord Dark.jpg https://images-assets.nasa.gov/image/art002e009287/art002e009287~large.jpg 68a78c5e59805b6ba8ef7357914e50638626e9943d7598fe632ce730236c8ac2
-wallpaper/sunlit-arch_Osaka Jade.jpg https://w.wallhaven.cc/full/vp/wallhaven-vpml78.jpg 195e34cd66240f9bc0f1eedc369ed2da7d1f30df3c8b886b3c628cc551004ca2
+wallpaper/sunlit-arch_Osaka jade.jpg https://w.wallhaven.cc/full/vp/wallhaven-vpml78.jpg 195e34cd66240f9bc0f1eedc369ed2da7d1f30df3c8b886b3c628cc551004ca2
 wallpaper/poly-forest_Kanagawa.jpg https://w.wallhaven.cc/full/96/wallhaven-966ekk.jpg 99a27f0b1d7e8afad5c19226eae222677be5972b86ba64c7e6cb9c51b8272f93
