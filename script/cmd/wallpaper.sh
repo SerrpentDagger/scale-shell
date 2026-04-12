@@ -41,13 +41,13 @@ if [[ $1 == "hook" ]]; then
 		if source "$FEATHERH/state.sh" check "$SCHEME_PREF$scheme"; then
 			exit 0
 		else
-			source "$FEATHERH/state.sh" clear "$SCHEME_PREF"
+			source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
 			source "$FEATHERH/state.sh" set "$SCHEME_PREF$scheme"
 		fi
 		sleep 3
 		qs -c noctalia-shell ipc call colorScheme set "$scheme"
 	else
-		source "$FEATHERH/state.sh" clear "$SCHEME_PREF"
+		source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
 	fi
 	sleep 1.5
 
@@ -76,7 +76,7 @@ elif [[ $1 == "preset" ]]; then
 	fi
 	wallpaper="$target"
 fi
-source "$FEATHERH/state.sh" clear "$SCHEME_PREF"
+source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
 for out in $(get-active-monitor); do
 	qs -c noctalia-shell ipc call wallpaper set "$wallpaper" "$out"
 done

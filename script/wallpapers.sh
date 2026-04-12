@@ -7,11 +7,9 @@ trap 'source "$FEATHERH/tmp-clear.sh"' EXIT
 source "$FEATHERH/tmp-spawn.sh"
 cd "$FEATHER_PATH" || exit 1
 
-while IFS= read -r line || [[ -n "$line" ]]; do
-	read -r NAME URL EXP_SHA <<<"$line"
-
+while IFS=$'\t' read -r NAME URL EXP_SHA || [[ -n "$NAME" ]]; do
 	if [[ -z "$NAME" || -z "$URL" || -z "$EXP_SHA" ]]; then
-		echo "Skipping malformed wallpaper line: $line" >&2
+		echo "Skipping malformed wallpaper line" >&2
 		continue
 	fi
 
