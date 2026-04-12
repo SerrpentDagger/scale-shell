@@ -7,6 +7,8 @@ trap 'source "$FEATHERH/tmp-clear.sh"' EXIT
 source "$FEATHERH/tmp-spawn.sh"
 cd "$FEATHER_PATH" || exit 1
 
+is_success=1
+
 while IFS=$'\t' read -r NAME URL EXP_SHA || [[ -n "$NAME" ]]; do
 	if [[ -z "$NAME" || -z "$URL" || -z "$EXP_SHA" ]]; then
 		echo "Skipping malformed wallpaper line" >&2
@@ -30,5 +32,8 @@ while IFS=$'\t' read -r NAME URL EXP_SHA || [[ -n "$NAME" ]]; do
 		echo "  Expected: $EXP_SHA"
 		echo "  Actual  : $targets_sha"
 		rm -f "$target"
+		is_success=0
 	fi
 done <"$wall_file"
+
+[[ $is_success -eq 1 ]] && source "$FEATHERH/sel-comps.sh" --pending remove "Wallpapers"

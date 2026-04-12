@@ -30,4 +30,5 @@ if [[ "$for_diff" -eq 1 ]]; then
 	rm "$subdir/nvim/lua/matugen.lua"
 else
 	source "$FEATHERS/btop.sh"
+	source "$FEATHERH/sel-comps.sh" --pending remove "Configs"
 fi

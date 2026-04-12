@@ -53,3 +53,5 @@ xdg-mime default nvim.desktop text/x-c++
 xdg-mime default nvim.desktop application/xml
 xdg-mime default nvim.desktop text/xml
 xdg-mime default nvim.desktop text/css
+
+source "$FEATHERH/sel-comps.sh" --pending remove "Mimetypes"

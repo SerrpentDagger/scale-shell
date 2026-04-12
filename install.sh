@@ -33,7 +33,7 @@ fi
 for selected in "${FI_SELECTION[@]}"; do
 	case "$selected" in
 	System*) source "$FEATHERS/packages.sh" ;;
-	Auto-login) source "$FEATHERS/autologin.sh" ;;
+	Auto-Login) source "$FEATHERS/autologin.sh" ;;
 
 	LazyVim) source "$FEATHERS/lazyvim.sh" ;;
 	Mullvad*) source "$FEATHERS/mullvad.sh" ;;
@@ -53,7 +53,7 @@ for selected in "${FI_SELECTION[@]}"; do
 done
 
 echo "It is recommended to reboot after installation!"
-if gum confirm --affirmative "Reboot Now" --negative "" ""; then
+if gum confirm --show-help=false --affirmative "Reboot Now" --negative "" ""; then
 	systemctl reboot --no-wall
 else
 	source "$FEATHERH/show-done.sh"

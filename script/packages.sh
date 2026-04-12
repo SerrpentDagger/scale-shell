@@ -45,3 +45,5 @@ pkg_installed btop && source "$FEATHERH/back-cp.sh" "$FEATHERC/btop/btop.conf" "
 
 # Krita theme (I actually prefer plain dark theme here.)
 # pkg_installed krita && source "$FEATHERPS/krita.sh"
+
+source "$FEATHERH/sel-comps.sh" --pending remove "System Packages"

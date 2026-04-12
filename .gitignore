@@ -8,9 +8,6 @@ config/alacritty/themes/noctalia.toml
 script/package-lists/user-selected.packages
 script/package-lists/user-selected-aur.packages
 
-# Ignore user-selected install components
-selected_install.txt
-
 # Ignore wallpaper changes
 wallpaper
 wallpaper-presets/*

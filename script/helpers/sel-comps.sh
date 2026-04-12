@@ -1,13 +1,14 @@
 #!/bin/bash
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
-selection_file="$FEATHER_PATH/selected_install.txt"
+selection_file="$FEATHERSTATE/selected_install.txt"
+pending_file="$FEATHERSTATE/pending_install.txt"
 
 # "Vintage Story: Uncompromising survival game (Semi-closed, requires paid account)" \
 if [[ "generate" == "$1" ]]; then
 	if ! [[ -f "$selection_file" ]] || ! gum confirm "(Re)Install previously selected components?"; then
 		gum choose "System Packages: Upgrade system and install important packages (RECOMMENDED)" \
-			"Auto-login: Setup to skip typing your password twice on boot" \
+			"Auto-Login: Setup to skip typing your password twice on boot" \
 			"LazyVim: A gorgeous editor" \
 			"Mullvad Browser: A reasonably private browser for daily use" \
 			"Tor Browser: The anonymous browser" \
@@ -18,25 +19,33 @@ if [[ "generate" == "$1" ]]; then
 			"Alacritty in Nautilus: Set up context menu entry for Nautilus" \
 			"Mimetypes: Default applications to open files (RECOMMENDED)" \
 			"Configs: Copy config files into place (RECOMMENDED)" \
-			--header "Select the desired components to install:" --no-limit --height=15 >"$selection_file"
+			--header "Select the desired components to install:" --no-limit --height=15 | tee "$selection_file" "$pending_file" >/dev/null
 	fi
-elif [[ "fetch" == "$1" ]]; then
-	if ! [[ -f "$selection_file" ]]; then
-		echo "Error: Missing component selection file!"
-		return 1
+else
+	if [[ "--pending" == "$1" ]]; then
+		selection_file="$pending_file"
+		shift
 	fi
-	if [[ -z "${FI_SELECTION:-}" ]]; then
+
+	if [[ "fetch" == "$1" ]]; then
+		if ! [[ -f "$selection_file" && -f "$pending_file" ]]; then
+			echo "Error: Missing component selection or pending file!"
+			return 1
+		fi
+		if ! diff "$selection_file" "$pending_file" >/dev/null; then
+			gum confirm "Some components installed successfully. Continue with remaining?" \
+				--affirmative "Continue" --negative "Reinstall All" && selection_file="$pending_file"
+		fi
+
 		FI_SELECTION=""
 		mapfile -t FI_SELECTION < <(grep -Po '^[^:]+(?=:)' "$selection_file")
 		export FI_SELECTION
+	elif [[ "check" == "$1" ]]; then
+		grep -Po "^$2:" "$selection_file" >/dev/null
+	elif [[ "remove" == "$1" ]]; then
+		sed -i "s/^$2:.*//g" "$selection_file"
+	else
+		echo "Usage: $0 <generate|fetch|check NAME|remove NAME>"
+		return 1
 	fi
-elif [[ "check" == "$1" ]]; then
-	source "$FEATHERH/sel-comps.sh" fetch
-	for sel in "${FI_SELECTION[@]}"; do
-		[[ "$sel" == "$2" ]] && return 0
-	done
-	return 1
-else
-	echo "Usage: $0 <generate|fetch|check>"
-	return 1
 fi

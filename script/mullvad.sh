@@ -5,12 +5,14 @@ source "$HOME/.local/share/feathers-and-flame/vars.sh"
 tor_version="15.0.8"
 dl_link="https://mullvad.net/en/download/browser/linux-x86_64/latest"
 app_name="mullvad"
+pending_name="Mullvad"
 if [[ "tor" == "$1" ]]; then
 	tor_link="https://www.torproject.org/download/"
 	html_text="$(curl -fsSL "$tor_link")"
 	tor_version=$(echo "$html_text" | grep "/dist/torbrowser" | grep -Po -m 1 "tor-browser-linux-x86_64-\\K\\d\\d\\.\\d+\\.\\d+")
 	dl_link="https://www.torproject.org/dist/torbrowser/$tor_version/tor-browser-linux-x86_64-$tor_version.tar.xz"
 	app_name="tor"
+	pending_name="Tor"
 	if [[ -z "$tor_version" ]]; then
 		echo "Unable to determine Tor version for download. Skipping."
 		return 1
@@ -33,9 +35,12 @@ cd ~/.local/share/$app_name-browser || exit 1
 ./start-$app_name-browser.desktop --register-app
 desktop_name="$HOME/.local/share/applications/start-$app_name-browser.desktop"
 # Fix said broken .desktop
+sleep 0.5
 sed -i "s+\\./Browser+$HOME/.local/share/$app_name-browser/Browser+g" "$desktop_name"
 sed -i "s+Exec=.*$+Exec=$HOME/.local/share/$app_name-browser/Browser/start-$app_name-browser+g" "$desktop_name"
 chmod +x "$desktop_name"
 
 # Remove archive download
 source "$FEATHERH/tmp-clear.sh"
+
+source "$FEATHERH/sel-comps.sh" --pending remove "$pending_name Browser"

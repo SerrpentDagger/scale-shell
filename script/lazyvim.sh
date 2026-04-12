@@ -11,3 +11,5 @@ source "$FEATHERH/backup.sh" -m ~/.cache/nvim
 source "$FEATHERH/back-cp.sh" "$FEATHERC/nvim" ~/.config/nvim
 
 source "$FEATHERPS/lazyvim.sh"
+
+source "$FEATHERH/sel-comps.sh" --pending remove "LazyVim"

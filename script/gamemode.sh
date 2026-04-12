@@ -16,3 +16,5 @@ source "$FEATHERH/back-cp.sh" "$FEATHERC/gamemode/gamemode.ini" "$gm_file"
 
 echo "Enabling gamemoded service"
 systemctl --user enable --now gamemoded
+
+source "$FEATHERH/sel-comps.sh" --pending remove "Gamemode"

@@ -11,3 +11,5 @@ sudo systemctl start tlp.service
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.socket
 sudo systemctl enable NetworkManager-dispatcher.service
+
+source "$FEATHERH/sel-comps.sh" --pending remove "TLP"

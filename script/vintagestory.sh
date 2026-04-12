@@ -15,3 +15,5 @@ cd ~/.local/share || exit 1
 tar -xvf "$HOME/$vs_download"
 cp "$FEATHERA/manual-vintagestory.desktop" applications/
 source "$FEATHERH/sed-user.sh" applications/manual-vintagestory.desktop
+
+source "$FEATHERH/sel-comps.sh" --pending remove "Vintage Story"

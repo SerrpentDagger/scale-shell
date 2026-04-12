@@ -23,3 +23,5 @@ source "$FEATHERH/hide-desktop.sh" /usr/share/applications/bssh.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/bvnc.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/lstopo.desktop
 source "$FEATHERH/hide-desktop.sh" /usr/share/applications/kvantummanager.desktop
+
+source "$FEATHERH/sel-comps.sh" --pending remove "Desktop Entries"
