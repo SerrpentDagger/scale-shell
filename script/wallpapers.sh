@@ -29,7 +29,7 @@ while IFS=$'\t' read -r NAME URL EXP_SHA || [[ -n "$NAME" ]]; do
 		echo "Success: $NAME"
 		source "$FEATHERH/back-cp.sh" "$target" "$FEATHER_PATH/$NAME"
 	else
-		echo "SHA MISMATCH for $NAME:"
+		gum style --foreground="#FF2222" "SHA MISMATCH for $NAME:"
 		echo "  Expected: $EXP_SHA"
 		echo "  Actual  : $targets_sha"
 		rm -f "$target"

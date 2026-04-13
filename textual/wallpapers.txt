@@ -9,8 +9,10 @@ wallpaper/selective-bloom_Occult Umbral.jpg	https://w.wallhaven.cc/full/wy/wallh
 wallpaper/selective-seeds_Yellow AMOLED.jpg	https://w.wallhaven.cc/full/0j/wallhaven-0j1mwp.jpg	8635a1838fba66aca9363d13deab5917b2ccfc0d96f0688266ec8d0ac03bafcd
 wallpaper/selective-leopard_Blue AMOLED.jpg	https://w.wallhaven.cc/full/48/wallhaven-4851go.jpg	c3959852acd190ab40d1c11c3dae1511858e2be045f26adf903defcf0206243d
 wallpaper/selective-lion_Yellow AMOLED.jpg	https://w.wallhaven.cc/full/p8/wallhaven-p8mz7j.jpg	0e7d9c2e121ea955f4ca446d34737d5f06b7327c749f41a5a03d542a393c2f41
-wallpaper/mars-horizon_Oxide.png	https://github.com/steve-lohmeyer/omarchy-mars-theme/blob/master/backgrounds/mars-3.png	cb5c510a7c26c7b53e97b3470cdf8f6e1970abbd4c12dbefc267e912cf2b0846
-wallpaper/rainy-night_Catppuccin.png	https://github.com/atif-1402/omarchy-rainynight-theme/blob/main/backgrounds/1.png	18932e91a92371748fdde0609a5d3afbd40544d23392038239eeb608e07bc363
+wallpaper/mars-horizon_Oxide.png	https://raw.githubusercontent.com/steve-lohmeyer/omarchy-mars-theme/refs/heads/master/backgrounds/mars-3.png	cb5c510a7c26c7b53e97b3470cdf8f6e1970abbd4c12dbefc267e912cf2b0846
+wallpaper/rainy-night_Catppuccin.png	https://raw.githubusercontent.com/atif-1402/omarchy-rainynight-theme/refs/heads/main/backgrounds/1.png	18932e91a92371748fdde0609a5d3afbd40544d23392038239eeb608e07bc363
 wallpaper/artemis-earthrise_Nord Dark.jpg	https://images-assets.nasa.gov/image/art002e009287/art002e009287~large.jpg	68a78c5e59805b6ba8ef7357914e50638626e9943d7598fe632ce730236c8ac2
 wallpaper/sunlit-arch_Osaka jade.jpg	https://w.wallhaven.cc/full/vp/wallhaven-vpml78.jpg	195e34cd66240f9bc0f1eedc369ed2da7d1f30df3c8b886b3c628cc551004ca2
 wallpaper/poly-forest_Kanagawa.jpg	https://w.wallhaven.cc/full/96/wallhaven-966ekk.jpg	99a27f0b1d7e8afad5c19226eae222677be5972b86ba64c7e6cb9c51b8272f93
+wallpaper/city-glare_Solarized Dark.jpg	https://raw.githubusercontent.com/chrisintheshell/omarchy-lairetam-theme/refs/heads/main/backgrounds/nm-1.jpg	0f94132f3b2623d30bd6a65682d60d99c7c29c826de6012d6c85b8c75c857fd7
+wallpaper/color-rush_Purplized Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/base16-tarot/refs/heads/main/backgrounds/tarot.jpg	adc41e84854b837b97cf90ab666e1dd2c30396582d8657526348877da3f39872
