@@ -2,4 +2,4 @@
 
 pkill -f 'qs -c noctalia-shell'
 sleep 0.5
-qs -c noctalia-shell &
+nohup qs -c noctalia-shell >/dev/null 2>&1 &
