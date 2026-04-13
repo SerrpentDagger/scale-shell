@@ -1,0 +1,94 @@
+{
+	"dark": {
+		"mPrimary": "#948d6a",
+		"mOnPrimary": "#1f2628",
+		"mSecondary": "#c06e80",
+		"mOnSecondary": "#1f2628",
+		"mTertiary": "#7ea8a5",
+		"mOnTertiary": "#1f2628",
+		"mError": "#c340b4",
+		"mOnError": "#1f2628",
+		"mSurface": "#1f2628",
+		"mOnSurface": "#d8bb93",
+		"mSurfaceVariant": "#2a3537",
+		"mOnSurfaceVariant": "#717c72",
+		"mOutline": "#364346",
+		"mShadow": "#1f2628",
+		"mHover": "#7ea8a5",
+		"mOnHover": "#1f2628",
+		"terminal": {
+			"normal": {
+				"black": "#061218",
+				"red": "#c340b4",
+				"green": "#948d6a",
+				"yellow": "#c06e80",
+				"blue": "#7ed8c5",
+				"magenta": "#7f9ab8",
+				"cyan": "#70956a",
+				"white": "#c89293"
+			},
+			"bright": {
+				"black": "#726969",
+				"red": "#e824cd",
+				"green": "#bb996c",
+				"yellow": "#e68499",
+				"blue": "#7fca9f",
+				"magenta": "#8a9ba9",
+				"cyan": "#7ca87a",
+				"white": "#dcbaba"
+			},
+			"foreground": "#dcbaba",
+			"background": "#1f2628",
+			"selectionFg": "#c89293",
+			"selectionBg": "#2d674c",
+			"cursorText": "#1f2628",
+			"cursor": "#c89293"
+		}
+	},
+	"light": {
+		"mPrimary": "#896f4e",
+		"mOnPrimary": "#f2bdbc",
+		"mSecondary": "#77403f",
+		"mOnSecondary": "#f2bdbc",
+		"mTertiary": "#4d9b89",
+		"mOnTertiary": "#f2bdbc",
+		"mError": "#c73fc8",
+		"mOnError": "#f2bdbc",
+		"mSurface": "#f2bdbc",
+		"mOnSurface": "#546164",
+		"mSurfaceVariant": "#e5b0b0",
+		"mOnSurfaceVariant": "#8a8080",
+		"mOutline": "#cf9ca0",
+		"mShadow": "#f2bdbc",
+		"mHover": "#4d9b89",
+		"mOnHover": "#f2bdbc",
+		"terminal": {
+			"normal": {
+				"black": "#1f2628",
+				"red": "#c73fc8",
+				"green": "#896f4e",
+				"yellow": "#77403f",
+				"blue": "#4d9b89",
+				"magenta": "#a05bb3",
+				"cyan": "#5a7b59",
+				"white": "#546164"
+			},
+			"bright": {
+				"black": "#8a8080",
+				"red": "#d747c7",
+				"green": "#91885e",
+				"yellow": "#834a56",
+				"blue": "#66bf9d",
+				"magenta": "#4c6583",
+				"cyan": "#63855e",
+				"white": "#43666c"
+			},
+			"foreground": "#546164",
+			"background": "#f2bdbc",
+			"selectionFg": "#f2bdbc",
+			"selectionBg": "#c9d1d0",
+			"cursorText": "#f2bdbc",
+			"cursor": "#43666c"
+		}
+	}
+}
