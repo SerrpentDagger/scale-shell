@@ -16,3 +16,4 @@ wallpaper/sunlit-arch_Osaka jade.jpg	https://w.wallhaven.cc/full/vp/wallhaven-vp
 wallpaper/poly-forest_Kanagawa.jpg	https://w.wallhaven.cc/full/96/wallhaven-966ekk.jpg	99a27f0b1d7e8afad5c19226eae222677be5972b86ba64c7e6cb9c51b8272f93
 wallpaper/city-glare_Solarized Dark.jpg	https://raw.githubusercontent.com/chrisintheshell/omarchy-lairetam-theme/refs/heads/main/backgrounds/nm-1.jpg	0f94132f3b2623d30bd6a65682d60d99c7c29c826de6012d6c85b8c75c857fd7
 wallpaper/color-rush_Purplized Dark.jpg	https://raw.githubusercontent.com/JJDizz1L/base16-tarot/refs/heads/main/backgrounds/tarot.jpg	adc41e84854b837b97cf90ab666e1dd2c30396582d8657526348877da3f39872
+wallpaper/pixel-moon.png https://w.wallhaven.cc/full/zp/wallhaven-zpp3mg.png 95c3ef78166b92273650c1b60ac7d4349f97f2a423dbdc04c6b8923d595a6874
