@@ -3,7 +3,7 @@
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 if [[ $# -lt 1 ]]; then
-	echo "Usage: bash wallpaper.sh <random|preset NUM|hook>"
+	echo "Usage: bash wallpaper.sh <random|preset NUM|hook [--clear]>"
 	exit
 fi
 
@@ -34,6 +34,10 @@ scheme-from-wallpaper() {
 
 SCHEME_PREF="FEATHER_COLOR_SCHEME_"
 if [[ $1 == "hook" ]]; then
+	if [[ $1 == "--clear" ]]; then
+		source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
+		exit 0
+	fi
 	fetch_monitor=$(get-active-monitor | grep -m 1 ".")
 	wallpaper="$(qs -c noctalia-shell ipc call wallpaper get "$fetch_monitor")"
 	scheme="$(scheme-from-wallpaper "$wallpaper")"

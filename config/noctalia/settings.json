@@ -236,7 +236,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Noctalia (default)",
+        "predefinedScheme": "GitHub Dark",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -416,7 +416,7 @@
         "screenLock": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh kill",
         "screenUnlock": "",
         "session": "",
-        "startup": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook",
+        "startup": "sleep 3 && bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook",
         "wallpaperChange": ""
     },
     "idle": {
@@ -462,7 +462,7 @@
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",

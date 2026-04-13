@@ -20,7 +20,3 @@ nethogs
 
 # Slick backups
 deja-dup
-
-# Network analyser
-wireshark-cli
-wireshark-qt
