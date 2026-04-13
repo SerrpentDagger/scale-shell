@@ -36,4 +36,6 @@ while IFS=$'\t' read -r NAME URL EXP_SHA || [[ -n "$NAME" ]]; do
 	fi
 done <"$wall_file"
 
-[[ $is_success -eq 1 ]] && source "$FEATHERH/sel-comps.sh" --pending remove "Wallpapers"
+if [[ $is_success -eq 1 ]]; then
+	source "$FEATHERH/sel-comps.sh" --pending remove "Wallpapers"
+fi
