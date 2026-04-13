@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gum style --bold --foreground="#DDDD44" "Configuring .desktop files..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 # Hide superfluous

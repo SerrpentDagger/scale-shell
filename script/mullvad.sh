@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gum style --bold --foreground="#DDDD44" "Installing Browser..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 tor_version="15.0.8"

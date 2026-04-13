@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gum style --bold --foreground="#DDDD44" "Installing VintageStory..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 echo "Installing required dotnet-runtime for VS"

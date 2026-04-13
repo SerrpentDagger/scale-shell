@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Install and setup alacritty terminal in nautilus context menu"
+gum style --bold --foreground="#DDDD44" "Install and setup alacritty terminal in nautilus context menu..."
 yay -Sua --noconfirm nautilus-open-any-terminal
 nautilus -q || true
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas || echo "Warning: Failed to compile glib schemas!"

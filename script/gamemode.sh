@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing gamemode"
+gum style --bold --foreground="#DDDD44" "Installing Gamemode..."
 sudo pacman -S --noconfirm --needed gamemode lib32-gamemode
 echo "Adding $USER to gamemode group"
 sudo usermod -aG gamemode "$USER"

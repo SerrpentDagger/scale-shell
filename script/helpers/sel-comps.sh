@@ -46,6 +46,7 @@ else
 		grep -Po "^$2:" "$selection_file" >/dev/null
 	elif [[ "remove" == "$1" ]]; then
 		sed -i "s/^$2:.*//g" "$selection_file"
+		gum style --bold --foreground="#55FF99" "Installation success: $2"
 	else
 		echo "Usage: $0 <generate|fetch|check NAME|remove NAME>"
 		return 1

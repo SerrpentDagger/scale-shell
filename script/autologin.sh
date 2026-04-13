@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gum style --bold --foreground="#DDDD44" "Setting up auto-login..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 al_file="/etc/sddm.conf.d/autologin.conf"

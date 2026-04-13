@@ -1,3 +1,4 @@
+gum style --bold --foreground="#DDDD44" "Setting Mimetypes..."
 # Open directories in file manager
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 

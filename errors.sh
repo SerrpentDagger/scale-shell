@@ -11,10 +11,10 @@ catch_errors() {
 
 	local exit_code=$?
 
-	echo "ERROR: Command exit with non-zero return $exit_code."
+	gum style --foreground="#FF2222" "ERROR: Command exit with non-zero return."
 	echo "Installation stopped! Please consider the above log."
 	echo "You can attempt to continue installation by running the following:"
-	echo "  bash $HOME/.local/share/feathers-and-flame/install.sh"
+	gum style --foreground="#CCCCCC" --background="#444444" "bash $HOME/.local/share/feathers-and-flame/install.sh"
 }
 
 # Exit handler - ensures cleanup happens on any exit

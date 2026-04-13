@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gum style --bold --foreground="#DDDD44" "Installing LazyVim..."
 # npm cargo R
 sudo pacman -S --noconfirm --needed npm lazygit ripgrep fd neovim
 

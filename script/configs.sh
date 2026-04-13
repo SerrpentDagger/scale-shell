@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gum style --bold --foreground="#DDDD44" "Copying over configs..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 subdir="$HOME/.config"
 for_diff=0

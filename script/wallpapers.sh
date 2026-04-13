@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gum style --bold --foreground="#DDDD44" "Downloading extra wallpapers..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 
 wall_file="$FEATHERX/wallpapers.txt"

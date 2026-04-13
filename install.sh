@@ -30,6 +30,7 @@ if ! gum confirm "Proceed?"; then
 	exit 1
 fi
 
+gum style --bold --foreground="#DDDD44" "Beginning Installation..."
 # Install
 for selected in "${FI_SELECTION[@]}"; do
 	case "$selected" in
@@ -49,11 +50,12 @@ for selected in "${FI_SELECTION[@]}"; do
 	Alacritty*) source "$FEATHERS/gnome-terminal.sh" ;;
 	Mimetypes) source "$FEATHERS/mimetypes.sh" ;;
 	Configs) source "$FEATHERS/configs.sh" ;;
-	*) echo "Unrecognised installation instruction $selected! Exiting." ;;
+	*) echo "Unrecognised installation instruction $selected! Exiting." && exit 1 ;;
 	esac
 done
 
-echo "It is recommended to reboot after installation!"
+gum style --bold --foreground="#55FF99" "Installation completed successfully!"
+gum style --underline "It is recommended to reboot after installation."
 if gum confirm --show-help=false --affirmative "Reboot Now" --negative "" ""; then
 	systemctl reboot --no-wall
 else
