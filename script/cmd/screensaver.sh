@@ -43,7 +43,7 @@ screensaver_in_focus() {
 }
 
 get_monitors() {
-	niri msg $outputword | grep -oP "$niri_output_pattern"
+	niri msg $outputword | grep -B 1 "Current mode" | grep -oP "$niri_output_pattern"
 }
 
 focus_monitor() {

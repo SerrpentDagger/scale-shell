@@ -8,7 +8,7 @@ if [[ $# -lt 1 ]]; then
 fi
 
 get-active-monitor() {
-	niri msg outputs | grep -Po "Output.*\\(\\K[^\\)]+"
+	niri msg outputs | grep -B 1 "Current mode" | grep -Po "Output.*\\(\\K[^\\)]+"
 }
 
 get_random_file_or_return_path() {
@@ -34,6 +34,7 @@ scheme-from-wallpaper() {
 
 SCHEME_PREF="FEATHER_COLOR_SCHEME_"
 if [[ $1 == "hook" ]]; then
+	shift
 	if [[ $1 == "--clear" ]]; then
 		source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
 		exit 0
@@ -42,6 +43,7 @@ if [[ $1 == "hook" ]]; then
 	wallpaper="$(qs -c noctalia-shell ipc call wallpaper get "$fetch_monitor")"
 	scheme="$(scheme-from-wallpaper "$wallpaper")"
 	if [[ -n "$scheme" ]]; then
+		echo "Setting state for $scheme"
 		if source "$FEATHERH/state.sh" check "$SCHEME_PREF$scheme"; then
 			exit 0
 		else
@@ -51,6 +53,7 @@ if [[ $1 == "hook" ]]; then
 		sleep 3
 		qs -c noctalia-shell ipc call colorScheme set "$scheme"
 	else
+		echo "Wallpaper colors; clearing state."
 		source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
 	fi
 	sleep 1.5
@@ -80,7 +83,6 @@ elif [[ $1 == "preset" ]]; then
 	fi
 	wallpaper="$target"
 fi
-source "$FEATHERH/state.sh" clear "$SCHEME_PREF" || true
 for out in $(get-active-monitor); do
 	qs -c noctalia-shell ipc call wallpaper set "$wallpaper" "$out"
 done
