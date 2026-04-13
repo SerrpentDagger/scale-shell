@@ -39,4 +39,6 @@ done <"$wall_file"
 
 if [[ $is_success -eq 1 ]]; then
 	source "$FEATHERH/sel-comps.sh" --pending remove "Wallpapers"
+else
+	gum style --bold --foreground="#DDDD44" "Warning: Some wallpapers failed the checksum and were deleted."
 fi

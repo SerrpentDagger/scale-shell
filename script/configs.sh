@@ -4,7 +4,7 @@ gum style --bold --foreground="#DDDD44" "Copying over configs..."
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
 subdir="$HOME/.config"
 for_diff=0
-if [[ "--for-diff" = "$1" ]]; then
+if [[ "--for-diff" = "${1:-}" ]]; then
 	subdir="$FEATHERT/feather"
 	for_diff=1
 	shift
