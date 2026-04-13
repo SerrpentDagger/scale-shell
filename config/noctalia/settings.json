@@ -236,7 +236,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Osaka jade",
+        "predefinedScheme": "Nord Dark",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -416,7 +416,7 @@
         "screenLock": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/screensaver.sh kill",
         "screenUnlock": "",
         "session": "",
-        "startup": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook --clear",
+        "startup": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/noct-start.sh",
         "wallpaperChange": "bash /home/serpent/.local/share/feathers-and-flame/script/cmd/wallpaper.sh hook --clear"
     },
     "idle": {
