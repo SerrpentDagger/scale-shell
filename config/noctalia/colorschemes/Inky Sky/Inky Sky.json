@@ -1,0 +1,94 @@
+{
+	"dark": {
+		"mPrimary": "#e10005",
+		"mOnPrimary": "#0a0523",
+		"mSecondary": "#c4406d",
+		"mOnSecondary": "#0a0523",
+		"mTertiary": "#b95427",
+		"mOnTertiary": "#0a0523",
+		"mError": "#cf493c",
+		"mOnError": "#0a0523",
+		"mSurface": "#0a0523",
+		"mOnSurface": "#7a7a7a",
+		"mSurfaceVariant": "#120526",
+		"mOnSurfaceVariant": "#596065",
+		"mOutline": "#103b51",
+		"mShadow": "#0a0523",
+		"mHover": "#b95427",
+		"mOnHover": "#0a0523",
+		"terminal": {
+			"foreground": "#7a7a7a",
+			"background": "#0a0523",
+			"selectionFg": "#878787",
+			"selectionBg": "#120526",
+			"cursorText": "#120526",
+			"cursor": "#7a7a7a",
+			"normal": {
+				"black": "#120526",
+				"red": "#cf493c",
+				"green": "#617e14",
+				"yellow": "#9e8119",
+				"blue": "#3371c3",
+				"magenta": "#c4406d",
+				"cyan": "#2c8687",
+				"white": "#e7e7e7"
+			},
+			"bright": {
+				"black": "#273f4a",
+				"red": "#b95427",
+				"green": "#4a5156",
+				"yellow": "#596065",
+				"blue": "#7a7a7a",
+				"magenta": "#716db1",
+				"cyan": "#878787",
+				"white": "#fbfbfb"
+			}
+		}
+	},
+	"light": {
+		"mPrimary": "#e10005",
+		"mOnPrimary": "#fbfbfb",
+		"mSecondary": "#c4406d",
+		"mOnSecondary": "#fbfbfb",
+		"mTertiary": "#b95427",
+		"mOnTertiary": "#fbfbfb",
+		"mError": "#cf493c",
+		"mOnError": "#fbfbfb",
+		"mSurface": "#fbfbfb",
+		"mOnSurface": "#596065",
+		"mSurfaceVariant": "#e7e7e7",
+		"mOnSurfaceVariant": "#7a7a7a",
+		"mOutline": "#d3d1c2",
+		"mShadow": "#e7e7e7",
+		"mHover": "#b95427",
+		"mOnHover": "#fbfbfb",
+		"terminal": {
+			"foreground": "#596065",
+			"background": "#fbfbfb",
+			"selectionFg": "#4a5156",
+			"selectionBg": "#e7e7e7",
+			"cursorText": "#e7e7e7",
+			"cursor": "#596065",
+			"normal": {
+				"black": "#120526",
+				"red": "#cf493c",
+				"green": "#617e14",
+				"yellow": "#9e8119",
+				"blue": "#3371c3",
+				"magenta": "#c4406d",
+				"cyan": "#2c8687",
+				"white": "#a6a6a6"
+			},
+			"bright": {
+				"black": "#0a0523",
+				"red": "#b95427",
+				"green": "#4a5156",
+				"yellow": "#596065",
+				"blue": "#7a7a7a",
+				"magenta": "#716db1",
+				"cyan": "#878787",
+				"white": "#fbfbfb"
+			}
+		}
+	}
+}

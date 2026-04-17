@@ -198,6 +198,7 @@
                 {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
                     "customIconPath": "/home/serpent/.local/share/feathers-and-flame/icons/feathers.png",
                     "enableColorization": false,
                     "icon": "noctalia",
@@ -236,7 +237,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Kanagreenma",
+        "predefinedScheme": "Inky Sky",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -462,7 +463,7 @@
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",

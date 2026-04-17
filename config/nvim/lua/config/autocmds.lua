@@ -22,3 +22,10 @@ set_autoformat({ "fish" }, false)
 set_autoformat({ "lua" }, false)
 set_autoformat({ "perl" }, false)
 set_autoformat({ "yaml" }, false)
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = "*",
+	callback = function()
+		vim.opt.expandtab = false -- Stupid Spaces!!!! >:(
+	end
+})
