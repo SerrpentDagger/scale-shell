@@ -9,6 +9,7 @@ It's completely modular; you can either breeze through the install menu, pressin
 - Comprehensive theming setup; colours chosen dynamically from wallpaper
 - Wallpaper keybinds for favourite groups: get a random wallpaper from any favourite category
 - `cbonsai` screensaver
+- Night light with `wlsunset`
 - Fine-tuned window rules and shell configuration; custom hot-swap rules
 - LUKS-encrypted auto-login
 - Refined LazyVim out of the box
@@ -19,6 +20,8 @@ It's completely modular; you can either breeze through the install menu, pressin
 - File-sharing binds for `localsend`
 - Improved Nautilus integration for LazyVim and Alacritty
 - Preconfigured Virt-Manager with QEMU
+- Pre-set mimetypes
+- Easy-installation of suggested programs
 - Limine snapshots
 
 ## Installation
