@@ -21,6 +21,13 @@ if pgrep -x cbonsai &>/dev/null; then
 fi
 
 source "$HOME/.local/share/feathers-and-flame/vars.sh"
+# Check toggle state
+if [[ "force" == "$1" ]]; then
+	shift
+elif source "$FEATHERH/state.sh" check 'screensaver_disabled'; then
+	exit 0
+fi
+
 niri_output_pattern='^Output.*\(\K[^\)]+'
 focused_output() {
 	niri msg focused-output | grep -oP "$niri_output_pattern"
