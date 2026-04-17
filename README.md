@@ -28,12 +28,33 @@ It's completely modular; you can either breeze through the install menu, pressin
 
 Installation takes the form of a single `curl` command in an appropriate fresh CachyOS install.
 
-### of CachyOS (Preliminary)
+### of CachyOS
 
-In the CachyOS installer, make sure to encrypt your drive with LUKS, choose Limine as your bootloader, Niri as your window compositor, and use the same password for encryption as your account. You can uncheck `Firefox` from the pre-installed packages.
+First, install CachyOS normally (from a flashed USB with [their iso](https://cachyos.org/download/)), subject to the following notes:
+1. Select `Limine` as your bootloader. <img width="564" height="309" alt="limine bootloader selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/choose-limine.jpg" />
+3. Encrypt your drive by selecting `btrfs` and `Encrypt System` in the `Partitions` section. <img width="564" height="309" alt="btrfs drive encryption" src="https://serpentdagger.com/assets/images/feathers-and-flame/btrfs-encrypted-partitioning.jpg" />
+4. Select `Niri` in the `Desktop` section.
+5. You can uncheck Firefox in the `Packages` section, since Feathers can install Mullvad and Tor Browsers for you. <img width="1128" height="309" alt="package selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/package-selection.jpg" />
+6. Choose the same password for your user login as you did for encryption. <img width="564" height="309" alt="login password same" src="https://serpentdagger.com/assets/images/feathers-and-flame/login-details-same-password.jpg" />
+7. Reboot!
 
 ### of Feathers and Flame
 
 Once you've booted into your basic installation, press `Mod+Return` to open a terminal and run:
-`curl -fsSL https://serpentdagger.com/feathers-and-flame/install | bash`.
-Follow the prompts to arrive at a beautiful and functional system!
+`curl -fsSL https://serpentdagger.com/feathers-and-flame/install | bash`. You'll be greeted by a flashy owl: <img width="478" height="520" alt="feathers installer welcome" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-welcome.jpg" />
+
+Select the components you want, or just `Ctrl + A` for all of them!
+<img width="478" height="520" alt="installer select components for install" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-main-selection.jpg" />
+
+You will be asked for confirmation before installing:
+<img width="478" height="520" alt="installer confirm selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-confirm-selection.jpg" />
+
+After pressing `Yes`, the installer will take a while to download and configure the system for you, depending on your bandwidth and hardware. After it's done, you will be prompted to reboot:
+<img width="478" height="520" alt="installer finished reboot prompt" src="https://serpentdagger.com/assets/images/feathers-and-flame/installer-finished-reboot.jpg" />
+
+Once you've rebooted again, Feathers and Flame is ready for your enjoyment! I hope you have as great a time using it as I did setting it up!
+<img width="564" height="309" alt="install finished welcome screen boot" src="https://serpentdagger.com/assets/images/feathers-and-flame/install-finished-first-boot.jpg" />
+
+### Trouble?
+
+The installer keeps track of what components have been finished successfully, so if something goes wrong mid-install you can continue where you left off, or try again, by re-running the installer with `bash ~/.local/share/feathers-and-flame/install.sh`. It will ask if you want to pick up where you left off, or give you the opportunity to skip a component if it doesn't seem to work for some reason. This is also used later in the update script to avoid refreshing or installing unselected components on update.
