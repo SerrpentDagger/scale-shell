@@ -24,6 +24,12 @@ It's completely modular; you can either breeze through the install menu, pressin
 - Easy-installation of suggested programs
 - Limine snapshots
 
+## Showcase Pictures
+
+<img width="960" height="540" alt="flashy colors overview screen" src="https://serpentdagger.com/assets/images/feathers-and-flame/color-splash-overview.png" />
+<img width="960" height="540" alt="nord dark moon wallpaper" src="https://serpentdagger.com/assets/images/feathers-and-flame/dark-side-nord-showcase.png" />
+<img width="960" height="540" alt="keybind showcase peaceful cat background" src="https://serpentdagger.com/assets/images/feathers-and-flame/catppuccin-keybinds.png" />
+
 ## Installation
 
 Installation takes the form of a single `curl` command in an appropriate fresh CachyOS install.
