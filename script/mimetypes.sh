@@ -14,9 +14,11 @@ xdg-mime default imv.desktop image/tiff
 xdg-mime default org.gnome.Evince.desktop application/pdf
 
 # Use Mullvad as the default browser
-xdg-settings set default-web-browser start-tor-browser.desktop
-xdg-mime default start-tor-browser.desktop x-scheme-handler/http
-xdg-mime default start-tor-browser.desktop x-scheme-handler/https
+if [[ -f "$HOME/.local/share/applications/start-tor-browser.desktop" ]]; then
+	xdg-settings set default-web-browser start-tor-browser.desktop
+	xdg-mime default start-tor-browser.desktop x-scheme-handler/http
+	xdg-mime default start-tor-browser.desktop x-scheme-handler/https
+fi
 
 # Open video files with mpv
 xdg-mime default mpv.desktop video/mp4

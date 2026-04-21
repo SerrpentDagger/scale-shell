@@ -6,8 +6,9 @@ It's completely modular; you can either breeze through the install menu, pressin
 ## Some highlights
 
 - Niri, Noctalia, CachyOS (obv)
-- Comprehensive theming setup; colours chosen dynamically from wallpaper
+- Comprehensive theming setup; colours chosen dynamically from wallpaper or specific theme per wallpaper
 - Wallpaper keybinds for favourite groups: get a random wallpaper from any favourite category
+- Highly keyboard-driven with carefully thought-out bindings for most use
 - `cbonsai` screensaver
 - Night light with `wlsunset`
 - Fine-tuned window rules and shell configuration; custom hot-swap rules
@@ -37,12 +38,13 @@ Installation takes the form of a single `curl` command in an appropriate fresh C
 ### of CachyOS
 
 First, install CachyOS normally (from a flashed USB with [their iso](https://cachyos.org/download/)), subject to the following notes:
+
 1. Select `Limine` as your bootloader. <img width="564" height="309" alt="limine bootloader selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/choose-limine.jpg" />
-3. Encrypt your drive by selecting `btrfs` and `Encrypt System` in the `Partitions` section. <img width="564" height="309" alt="btrfs drive encryption" src="https://serpentdagger.com/assets/images/feathers-and-flame/btrfs-encrypted-partitioning.jpg" />
-4. Select `Niri` in the `Desktop` section.
-5. You can uncheck Firefox in the `Packages` section, since Feathers can install Mullvad and Tor Browsers for you. <img width="1128" height="309" alt="package selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/package-selection.jpg" />
-6. Choose the same password for your user login as you did for encryption. <img width="564" height="309" alt="login password same" src="https://serpentdagger.com/assets/images/feathers-and-flame/login-details-same-password.jpg" />
-7. Reboot!
+2. Encrypt your drive by selecting `btrfs` and `Encrypt System` in the `Partitions` section. <img width="564" height="309" alt="btrfs drive encryption" src="https://serpentdagger.com/assets/images/feathers-and-flame/btrfs-encrypted-partitioning.jpg" />
+3. Select `Niri` in the `Desktop` section.
+4. You can uncheck Firefox in the `Packages` section, since Feathers can install Mullvad and Tor Browsers for you. <img width="1128" height="309" alt="package selection" src="https://serpentdagger.com/assets/images/feathers-and-flame/package-selection.jpg" />
+5. Choose the same password for your user login as you did for encryption. <img width="564" height="309" alt="login password same" src="https://serpentdagger.com/assets/images/feathers-and-flame/login-details-same-password.jpg" />
+6. Reboot!
 
 ### of Feathers and Flame
 
